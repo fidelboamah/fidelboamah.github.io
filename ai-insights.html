@@ -7,67 +7,106 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="case-study">
-  <header class="cs-header">
-    <a class="logo" href="index.html" aria-label="Fidel Boamah — home">
-      <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path class="oct" d="M17.6 8.5 H30.4 L39.5 17.6 V30.4 L30.4 39.5 H17.6 L8.5 30.4 V17.6 Z" stroke-width="16" stroke-linejoin="round"/>
-        <text x="24" y="25" text-anchor="middle" dominant-baseline="central">FB</text>
-      </svg>
-    </a>
-    <nav class="cs-nav-pill">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="index.html#work" class="active">Work</a>
-    </nav>
 
-    <button class="cs-theme-toggle" aria-label="Toggle theme">
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>
-      </svg>
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>
-      </svg>
-    </button>
+  <header class="home-header">
+    <div class="home-header-left">
+      <a class="home-logo" href="index.html" aria-label="Fidel Boamah — home">
+        <span class="home-logo-mark">FB</span>
+        <span class="home-logo-text">Fidel Boamah</span>
+      </a>
+    </div>
+    <nav class="home-nav">
+      <a href="index.html">Work</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="home-header-right">
+      <button class="theme-toggle home-theme-btn" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
+      </button>
+    </div>
   </header>
 
   <main>
-  <section class="cs-hero">
-    <h1>AI Insights</h1>
-    <div class="cs-hero-grid">
-      <div class="cs-meta-table">
-        <p class="label">Company</p>
-        <p class="value">Klaviyo</p>
-        <p class="label">Role</p>
-        <p class="value">Product Designer II</p>
-        <p class="label">Timeline</p>
-        <p class="value">April – July 2025</p>
-        <p class="label">Team</p>
-        <p class="value">2 Developers</p>
-        <p class="value">1 UX Researcher</p>
-        <p class="value">6 Stakeholders</p>
-      </div>
-      <div class="cs-hero-text">
-        <span class="label">Overview</span>
-        <p>Leveraging AI to unlock hidden insights and revenue opportunities for marketers.</p>
-        <p>I spearheaded the UX for AI-driven insights, to translate complex predictive models into actionable workflows for marketers. The work I did established a scalable design framework for agentic intelligence features and helped drive a 25% boost in attributed value.</p>
-        <p>Today, users must manually analyze data to identify improvement opportunities. Spending days stitching together data points to unearth insights that drive marketing strategy. Research showed framing performance around revenue potential, gave users a clearer sense of value and reduced time between report analysis and execution.</p>
 
-        <div class="cs-cta-wrap">
-          <a class="cs-cta" href="#problem">Read the full case study</a>
-        </div>
+    <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+    <section class="cs2-hero">
+      <div class="cs2-hero-labels reveal">
+        <span>Product Design</span>
+        <span>·</span>
+        <span>B2B SaaS</span>
+        <span>·</span>
+        <span>2025</span>
+      </div>
+      <h1 class="reveal reveal-d1">AI Insights</h1>
+      <p class="cs2-hero-sub reveal reveal-d2">Turning complex predictive models into actionable revenue opportunities for B2B marketers.</p>
+      <div class="cs2-hero-media reveal reveal-d3">
+        <img src="assets/Homepage/AI-insights.png" alt="AI Insights dashboard" />
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ META ═══════════════════════════════ -->
+    <div class="cs2-meta-strip">
+      <div class="cs2-meta-item reveal">
+        <span class="cs2-meta-label">Company</span>
+        <span class="cs2-meta-value">Klaviyo</span>
+      </div>
+      <div class="cs2-meta-item reveal reveal-d1">
+        <span class="cs2-meta-label">Role</span>
+        <span class="cs2-meta-value">Product Designer II</span>
+      </div>
+      <div class="cs2-meta-item reveal reveal-d2">
+        <span class="cs2-meta-label">Timeline</span>
+        <span class="cs2-meta-value">April – July 2025</span>
+      </div>
+      <div class="cs2-meta-item reveal reveal-d3">
+        <span class="cs2-meta-label">Team</span>
+        <span class="cs2-meta-value">2 Developers · 1 Researcher · 6 Stakeholders</span>
       </div>
     </div>
-  </section>
 
-  <hr class="cs-divider" />
+    <!-- ══════════════════════════ LONG STORY SHORT ══════════════════════════ -->
+    <section class="cs2-section">
+      <span class="cs2-eyebrow reveal">Long Story Short</span>
+      <p class="cs2-lead reveal reveal-d1">I spearheaded the UX to translate complex predictive models into actionable workflows — establishing a scalable design framework for agentic intelligence and driving a 25% boost in attributed value.</p>
 
-  <div class="cs-content">
-    <section class="cs-section" id="problem">
-      <span class="eyebrow">The Problem</span>
-      <h2>Users have to manually analyze data to find improvement opportunities at scale</h2>
-      <p>Klaviyo sits on a massive "treasure trove" of 1st-party customer data, but unlocking insights is manual, time-consuming, and gated by marketing maturity. In fact, we learned regardless of scale, raw data does not equal revenue.</p>
+      <div class="cs2-accomplishments">
+        <div class="cs2-accomplishment reveal">
+          <span class="cs2-num">01</span>
+          <div>
+            <h4>Design</h4>
+            <p>Owned end-to-end UX for AI-driven insights, from early research through final designs shipped in production.</p>
+          </div>
+        </div>
+        <div class="cs2-accomplishment reveal reveal-d1">
+          <span class="cs2-num">02</span>
+          <div>
+            <h4>Research</h4>
+            <p>Led 18 user interviews across 9 industries to validate hypotheses and pressure-test design directions.</p>
+          </div>
+        </div>
+        <div class="cs2-accomplishment reveal reveal-d2">
+          <span class="cs2-num">03</span>
+          <div>
+            <h4>Framework</h4>
+            <p>Established a scalable design framework for agentic intelligence features now used across the product.</p>
+          </div>
+        </div>
+      </div>
 
-      <div class="maturity-scale" role="img" aria-label="Maturity scale from low-maturity SMBs and boutiques at around 100K events per year, who say: I have data but don't know what it means — to high-maturity enterprises at around 500M events per year, who say: I have answers but they are buried in noise.">
+      <div class="cs2-hmw reveal">
+        <span class="cs2-hmw-icon">💭</span>
+        <p>How might we help marketers discover and act on revenue opportunities — without requiring them to be data scientists?</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ THE PROBLEM ═══════════════════════════ -->
+    <section class="cs2-section">
+      <span class="cs2-eyebrow reveal">The Problem</span>
+      <h2 class="reveal reveal-d1">Users have to manually analyze data to find improvement opportunities at scale</h2>
+      <p class="reveal reveal-d2">Klaviyo sits on a massive "treasure trove" of 1st-party customer data, but unlocking insights is manual, time-consuming, and gated by marketing maturity. Regardless of scale, raw data does not equal revenue.</p>
+
+      <div class="maturity-scale reveal reveal-d3" role="img" aria-label="Maturity scale from low-maturity SMBs at around 100K events per year to high-maturity enterprises at around 500M events per year">
         <div class="ms-title" aria-hidden="true">Maturity Scale</div>
         <div class="ms-axis" aria-hidden="true"></div>
         <div class="ms-end">
@@ -98,150 +137,255 @@
       </div>
     </section>
 
-    <section class="cs-section">
-      <span class="eyebrow">The Existing Solution</span>
-      <h2>Generic suggestions failed to drive adoption</h2>
-      <p>The previous experience relied on high-level account metrics to generate generic recommendations lacking specific customer context. Instead of enabling immediate action, suggestions often redirected users to external help documentation, breaking their focus and stalling momentum.</p>
-      <img class="img-frame" src="assets/AI-insights/Screenshot of Klaviyo help docs.png" alt="Screenshot of Klaviyo help docs" style="aspect-ratio: 1674/1104;" />
+    <!-- ══════════════════════ THE EXISTING SOLUTION ══════════════════════ -->
+    <section class="cs2-section">
+      <span class="cs2-eyebrow reveal">The Existing Solution</span>
+      <h2 class="reveal reveal-d1">Generic suggestions failed to drive adoption</h2>
+      <p class="reveal reveal-d2">The previous experience relied on high-level account metrics to generate generic recommendations lacking specific customer context. Instead of enabling immediate action, suggestions often redirected users to external help documentation — breaking their focus and stalling momentum.</p>
+      <div class="cs2-media reveal reveal-d3">
+        <img src="assets/AI-insights/Screenshot of Klaviyo help docs.png" alt="Screenshot of Klaviyo help docs showing generic suggestions" style="aspect-ratio: 1674/1104;" />
+      </div>
     </section>
 
-    <section class="cs-section">
-      <span class="eyebrow">Speaking To Users</span>
-      <h2>I interviewed 18 marketers across 9 industries to validate this problem</h2>
-      <p>I conducted a listening tour to stress-test our hypothesis. Marketers expressed that current workflows are too technical and without proper context, data becomes a burden rather than an asset, leading to analysis paralysis.</p>
-      <img class="img-frame" src="assets/AI-insights/affinity mapping.jpg" alt="Affinity mapping exercise" style="aspect-ratio: 745/469;" />
+    <!-- ══════════════════════ SPEAKING TO USERS ══════════════════════ -->
+    <section class="cs2-section">
+      <span class="cs2-eyebrow reveal">Speaking To Users</span>
+      <h2 class="reveal reveal-d1">I interviewed 18 marketers across 9 industries to validate this problem</h2>
+      <p class="reveal reveal-d2">I conducted a listening tour to stress-test our hypothesis. Marketers expressed that current workflows are too technical — and without proper context, data becomes a burden rather than an asset, leading to analysis paralysis.</p>
 
-      <div class="cs-cards-grid">
-        <div class="cs-card accent">
-          <h4>Data density</h4>
-          <p>Marketers are drowning in data silos of reports without tools to unify.</p>
+      <div class="cs2-media reveal reveal-d3">
+        <img src="assets/AI-insights/affinity mapping.jpg" alt="Affinity mapping exercise from user research" style="aspect-ratio: 745/469;" />
+        <p class="cs2-media-caption">Affinity mapping from 18 interviews across 9 industries</p>
+      </div>
+
+      <div class="cs2-quote-grid">
+        <div class="cs2-quote reveal">
+          <p class="cs2-quote-text">"I have all this data but I don't know what it's telling me or what to do about it."</p>
+          <span class="cs2-quote-attr">Data Density</span>
         </div>
-        <div class="cs-card accent">
-          <h4>Disconnected Narratives</h4>
-          <p>Marketers struggle to connect isolated metrics to business goals.</p>
+        <div class="cs2-quote reveal reveal-d1">
+          <p class="cs2-quote-text">"Having to jump between platforms to piece together a picture of performance is exhausting."</p>
+          <span class="cs2-quote-attr">Disconnected Narratives</span>
         </div>
-        <div class="cs-card accent">
-          <h4>High Cognitive load</h4>
-          <p>Marketers spend hours reading help docs and analyzing performance.</p>
+        <div class="cs2-quote reveal reveal-d2">
+          <p class="cs2-quote-text">"I spend hours reading help docs just to understand what the numbers mean before I can act."</p>
+          <span class="cs2-quote-attr">High Cognitive Load</span>
         </div>
-        <div class="cs-card accent">
-          <h4>Fragmented Workflows</h4>
-          <p>Marketers are forced to export data into external tools to visualize trends.</p>
+        <div class="cs2-quote reveal reveal-d3">
+          <p class="cs2-quote-text">"I have to export everything into spreadsheets to even begin to visualize what's happening."</p>
+          <span class="cs2-quote-attr">Fragmented Workflows</span>
         </div>
       </div>
     </section>
 
-    <section class="cs-section">
-      <span class="eyebrow">Design Strategy &amp; Priorities</span>
-      <h2>I pitched 3 strategies to move from a passive data repository to an active growth engine.</h2>
+    <!-- ══════════════════════ DESIGN STRATEGY ══════════════════════ -->
+    <section class="cs2-section">
+      <span class="cs2-eyebrow reveal">Design Strategy &amp; Priorities</span>
+      <h2 class="reveal reveal-d1">I pitched 3 strategies to move from a passive data repository to an active growth engine.</h2>
 
-      <div class="cs-emoji-cards">
-        <div class="cs-emoji-card">
-          <div class="emoji">🔢</div>
+      <div class="cs2-strategies">
+        <div class="cs2-strategy reveal">
+          <div class="cs2-strategy-icon">🔢</div>
           <div>
             <h4>Make the numbers tell a story</h4>
-            <p>Users are currently drowning in dense data rows without clear takeaways. We pivoted to summarizing high-level patterns and metrics to surface immediate value.</p>
+            <p>Users are drowning in dense data rows without clear takeaways. We pivoted to summarizing high-level patterns and metrics to surface immediate value — replacing raw numbers with narrative context.</p>
           </div>
         </div>
-        <div class="cs-emoji-card">
-          <div class="emoji">👀</div>
+        <div class="cs2-strategy reveal reveal-d1">
+          <div class="cs2-strategy-icon">👀</div>
           <div>
             <h4>Show the 'why' to earn trust</h4>
-            <p>Raw data without context creates anxiety rather than clarity. We focused on increasing trust by backing every system suggestion with proven evidence and benchmarks.</p>
+            <p>Raw data without context creates anxiety rather than clarity. We focused on increasing trust by backing every system suggestion with proven evidence, benchmarks, and transparent reasoning.</p>
           </div>
         </div>
-        <div class="cs-emoji-card">
-          <div class="emoji">🏃</div>
+        <div class="cs2-strategy reveal reveal-d2">
+          <div class="cs2-strategy-icon">🏃</div>
           <div>
             <h4>Make it easy to take action</h4>
-            <p>Users are currently drowning in dense data rows without clear takeaways. We pivoted to summarizing high-level patterns and metrics to surface immediate value.</p>
+            <p>Insight without a clear path forward is wasted. Every recommendation needed a one-click path to execution — closing the gap between opportunity identification and campaign activation.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="cs-section">
-      <span class="eyebrow">Early Dashboard Concept</span>
-      <h2>Abstracting performance into a gamified score</h2>
-      <video class="img-frame" autoplay loop muted playsinline aria-label="Early dashboard concept" style="aspect-ratio: 1304/720;"><source src="assets/AI-insights/CHS.mp4" type="video/mp4" /></video>
-      <div class="cs-card">
-        <p><strong>Hypothesis:</strong> Summarizing complex account data with an abstract composite score would reduce cognitive load on marketers.</p>
+    <!-- ══════════════════════ EARLY CONCEPT ══════════════════════ -->
+    <section class="cs2-section">
+      <span class="cs2-eyebrow reveal">Early Dashboard Concept</span>
+      <h2 class="reveal reveal-d1">Abstracting performance into a gamified score</h2>
+      <div class="cs2-media reveal reveal-d2">
+        <video autoplay loop muted playsinline aria-label="Early dashboard concept with composite health score" style="aspect-ratio: 1304/720;"><source src="assets/AI-insights/CHS.mp4" type="video/mp4" /></video>
+        <p class="cs2-media-caption">Early concept — composite health score (0–100) modeled on a credit report</p>
       </div>
-      <p>Similar to a credit report, I created a feature to give users an at-a-glance understanding of their marketing performance. I anchored the experience on a composite score (0–100) and framed recommendations as opportunities to "gain points," assuming gamification would drive action.</p>
+      <div class="cs2-insight reveal">
+        <p><strong>Hypothesis:</strong> Summarizing complex account data with an abstract composite score would reduce cognitive load on marketers — similar to how a credit score distills financial health into a single actionable number.</p>
+      </div>
+      <p class="reveal">I created a feature to give users an at-a-glance understanding of their marketing performance, anchored on a composite score and framing recommendations as opportunities to "gain points."</p>
     </section>
 
-    <section class="cs-section">
-      <span class="eyebrow">We Simplified The Data But We Lost The Meaning</span>
-      <h2>Early testing revealed a new problem</h2>
-      <p>I stress-tested this experience with marketers and the feedback was consistent: the "Health Score" reduced visual clutter, but increased anxiety.</p>
-      <div class="cs-cards-grid">
-        <div class="cs-card">
+    <!-- ══════════════════════ THE PIVOT ══════════════════════ -->
+    <section class="cs2-section">
+      <span class="cs2-eyebrow reveal">We Simplified the Data But Lost the Meaning</span>
+      <h2 class="reveal reveal-d1">Early testing revealed a new problem</h2>
+      <p class="reveal reveal-d2">I stress-tested this experience with marketers and the feedback was consistent: the "Health Score" reduced visual clutter, but increased anxiety. The abstraction had severed the link that mattered most.</p>
+
+      <div class="cs2-problem-grid">
+        <div class="cs2-problem-card reveal">
           <h4>The Translation Gap</h4>
-          <p>Users couldn't translate a "+12 point increase" into a business outcome. The abstraction severed the link between their work and their revenue.</p>
+          <p>Users couldn't translate a "+12 point increase" into a business outcome. The score abstracted away the very numbers marketers use to justify decisions to their leadership.</p>
         </div>
-        <div class="cs-card">
+        <div class="cs2-problem-card reveal reveal-d1">
           <h4>The Validation Barrier</h4>
-          <p>Users couldn't verify the source of the recommendation, so they hesitated to act, eroding their trust in the platform's intelligence.</p>
+          <p>Users couldn't verify the source of the recommendation, so they hesitated to act. Without transparency, trust in the platform's intelligence eroded rather than grew.</p>
         </div>
       </div>
     </section>
 
-    <section class="cs-section">
-      <span class="eyebrow">Defining Dashboard Features</span>
-      <h2>I designed three features to help marketers validate opportunities and act on them.</h2>
-      <p>I replaced the abstract composite score with a projected revenue metric, creating a clear signal that users instinctively understand.</p>
+    <!-- ══════════════════════ DEFINING FEATURES ══════════════════════ -->
+    <section class="cs2-section">
+      <span class="cs2-eyebrow reveal">Defining Dashboard Features</span>
+      <h2 class="reveal reveal-d1">I designed three features to help marketers validate opportunities and act on them.</h2>
+      <p class="reveal reveal-d2">I replaced the abstract composite score with a projected revenue metric — a clear signal that users instinctively understand and can take directly to leadership.</p>
 
-      <ol class="cs-ordered">
-        <li>Total Revenue Opportunity</li>
-      </ol>
-      <img class="img-frame" src="assets/AI-insights/Total Revenue Opportunity.png" alt="Total Revenue Opportunity" style="aspect-ratio: 2518/1714;" />
-      <p>To avoid false precision, I displayed these estimates as revenue ranges backed by industry benchmarks. By acknowledging the potential margin of error, we demonstrated statistical rigor and established the transparency required to build user trust.</p>
+      <div class="cs2-features">
 
-      <ol class="cs-ordered" start="2">
-        <li>Proactive Recommendations</li>
-      </ol>
-      <img class="img-frame" src="assets/AI-insights/Proactive Recommendations.png" alt="Proactive Recommendations" style="aspect-ratio: 2518/1714;" />
-      <p>We packaged the analysis into a single atomic unit. This card reveals the specific data pattern (the "why"), quantifies the estimated revenue at stake (the value), and offers a direct CTA to execute the strategy. This removes the friction between identifying an opportunity and capturing it.</p>
+        <div class="cs2-feature">
+          <span class="cs2-feature-eyebrow reveal">Feature 01</span>
+          <h3 class="reveal reveal-d1">Total Revenue Opportunity</h3>
+          <p class="reveal reveal-d2">To avoid false precision, I displayed estimates as revenue ranges backed by industry benchmarks. Acknowledging the potential margin of error demonstrated statistical rigor and built the transparency required for trust.</p>
+          <div class="cs2-media reveal reveal-d3">
+            <img src="assets/AI-insights/Total Revenue Opportunity.png" alt="Total Revenue Opportunity feature" style="aspect-ratio: 2518/1714;" />
+          </div>
+        </div>
 
-      <ol class="cs-ordered" start="3">
-        <li>Human-AI Validation Flows</li>
-      </ol>
-      <p>We designed a "human-in-the-loop" workflow to mitigate the fear of blind automation. The AI acts as the production engine — selecting the strategy and generating full emails, SMS, and imagery — but the user retains final authority. This allows marketers to validate and configure every asset before it goes live, ensuring speed never compromises brand safety.</p>
-      <video class="img-frame" autoplay loop muted playsinline aria-label="Human-AI validation flow for configuring AI-generated campaigns" style="aspect-ratio: 1304/720;"><source src="assets/AI-insights/Configure.mp4" type="video/mp4" /></video>
+        <div class="cs2-feature">
+          <span class="cs2-feature-eyebrow reveal">Feature 02</span>
+          <h3 class="reveal reveal-d1">Proactive Recommendations</h3>
+          <p class="reveal reveal-d2">We packaged analysis into a single atomic unit — a card that reveals the specific data pattern (the "why"), quantifies the estimated revenue at stake (the value), and offers a direct CTA to execute the strategy. This removes friction between identifying an opportunity and capturing it.</p>
+          <div class="cs2-media reveal reveal-d3">
+            <img src="assets/AI-insights/Proactive Recommendations.png" alt="Proactive Recommendations feature" style="aspect-ratio: 2518/1714;" />
+          </div>
+        </div>
+
+        <div class="cs2-feature">
+          <span class="cs2-feature-eyebrow reveal">Feature 03</span>
+          <h3 class="reveal reveal-d1">Human-AI Validation Flows</h3>
+          <p class="reveal reveal-d2">We designed a "human-in-the-loop" workflow to mitigate the fear of blind automation. The AI acts as the production engine — selecting strategy and generating full emails, SMS, and imagery — but the user retains final authority. Marketers validate and configure every asset before it goes live, ensuring speed never compromises brand safety.</p>
+          <div class="cs2-media reveal reveal-d3">
+            <video autoplay loop muted playsinline aria-label="Human-AI validation flow for configuring AI-generated campaigns" style="aspect-ratio: 1304/720;"><source src="assets/AI-insights/Configure.mp4" type="video/mp4" /></video>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <section class="cs-section">
-      <span class="eyebrow">Final Designs</span>
-      <h2>Redesigned Dashboard Experience</h2>
+    <!-- ══════════════════════ FINAL DESIGNS ══════════════════════ -->
+    <section class="cs2-section">
+      <span class="cs2-eyebrow reveal">Final Designs</span>
+      <h2 class="reveal reveal-d1">Redesigned Dashboard Experience</h2>
 
-      <h3>AI Driven Insights</h3>
-      <p>User goal: Browse opportunities and validate the logic and data that inspired the recommendation.</p>
-      <video class="img-frame" autoplay loop muted playsinline aria-label="AI-driven insights dashboard" style="aspect-ratio: 1304/720;"><source src="assets/AI-insights/AI-insights.mp4" type="video/mp4" /></video>
+      <div class="cs2-final-items">
 
-      <h3>AI Assisted Workflows</h3>
-      <p>User goal: Ability to act on insights immediately, speeding up workflows with AI generated content and emails.</p>
-      <video class="img-frame" autoplay loop muted playsinline aria-label="AI-assisted workflows" style="aspect-ratio: 1304/720;"><source src="assets/AI-insights/assistedwork.mp4" type="video/mp4" /></video>
+        <div class="cs2-final-item">
+          <div class="cs2-final-item-meta reveal">
+            <h3>AI-Driven Insights</h3>
+            <p class="cs2-goal">User goal: Browse opportunities and validate the logic and data behind each recommendation.</p>
+          </div>
+          <div class="cs2-media reveal reveal-d1">
+            <video autoplay loop muted playsinline aria-label="AI-driven insights dashboard" style="aspect-ratio: 1304/720;"><source src="assets/AI-insights/AI-insights.mp4" type="video/mp4" /></video>
+          </div>
+        </div>
 
-      <h3>Tracking Model Performance</h3>
-      <p>By rooting the recommendation in peer data and framing the result in revenue, we turned a generic task into a high-value opportunity that marketers felt confident pursuing. We exposed the agent's thinking to build trust, then translated that data into projected revenue. This effectively bridged the gap between platform tasks and business goals, giving users a quantifiable target rooted in reality.</p>
-      <video class="img-frame" autoplay loop muted playsinline aria-label="Tracking model performance" style="aspect-ratio: 1304/720;"><source src="assets/AI-insights/modelperfo.mp4" type="video/mp4" /></video>
+        <div class="cs2-final-item">
+          <div class="cs2-final-item-meta reveal">
+            <h3>AI-Assisted Workflows</h3>
+            <p class="cs2-goal">User goal: Act on insights immediately, speeding up workflows with AI-generated content and emails.</p>
+          </div>
+          <div class="cs2-media reveal reveal-d1">
+            <video autoplay loop muted playsinline aria-label="AI-assisted workflows" style="aspect-ratio: 1304/720;"><source src="assets/AI-insights/assistedwork.mp4" type="video/mp4" /></video>
+          </div>
+        </div>
+
+        <div class="cs2-final-item">
+          <div class="cs2-final-item-meta reveal">
+            <h3>Tracking Model Performance</h3>
+            <p class="cs2-goal">User goal: Understand how the AI's recommendations are performing over time and build confidence in the system.</p>
+          </div>
+          <div class="cs2-media reveal reveal-d1">
+            <video autoplay loop muted playsinline aria-label="Tracking model performance" style="aspect-ratio: 1304/720;"><source src="assets/AI-insights/modelperfo.mp4" type="video/mp4" /></video>
+          </div>
+          <p class="reveal reveal-d2">By rooting each recommendation in peer data and framing results in revenue, we turned generic tasks into high-value opportunities marketers felt confident pursuing. This effectively bridged the gap between platform tasks and business goals — giving users a quantifiable target rooted in reality.</p>
+        </div>
+
+      </div>
     </section>
 
-    <section class="cs-section">
-      <span class="eyebrow">Impact</span>
-      <h2>Results</h2>
-      <p>We drove a 25% increase in Klaviyo-attributed value, a 14% boost in engagement, and a measurable 6 point NPS lift tied to data trust and clarity.</p>
-      <p>For customers, what once took hours of manual analysis was reduced to minutes through AI-assisted workflows. This shift from reactive analytics to guided, insight-led action reshaped how marketers leveraged data.</p>
-      <p>These outcomes shaped the AI Insights roadmap, creating a scalable framework for how Klaviyo uses AI to turn data into growth.</p>
+    <!-- ══════════════════════ IMPACT ══════════════════════ -->
+    <section class="cs2-section">
+      <span class="cs2-eyebrow reveal">Impact</span>
+      <h2 class="reveal reveal-d1">Results that shaped the roadmap</h2>
+
+      <div class="cs2-stats reveal reveal-d2">
+        <div class="cs2-stat">
+          <div class="cs2-stat-num">25%</div>
+          <div class="cs2-stat-label">Increase in Klaviyo-attributed value</div>
+        </div>
+        <div class="cs2-stat">
+          <div class="cs2-stat-num">14%</div>
+          <div class="cs2-stat-label">Boost in feature engagement</div>
+        </div>
+        <div class="cs2-stat">
+          <div class="cs2-stat-num">+6 NPS</div>
+          <div class="cs2-stat-label">Points tied to data trust and clarity</div>
+        </div>
+      </div>
+
+      <p class="reveal">For customers, what once took hours of manual analysis was reduced to minutes through AI-assisted workflows. This shift from reactive analytics to guided, insight-led action reshaped how marketers leverage data — and created a scalable framework for how Klaviyo uses AI to turn data into growth.</p>
     </section>
-  </div>
+
+    <!-- ══════════════════════ NEXT UP ══════════════════════ -->
+    <div class="cs2-next">
+      <span class="cs2-next-label reveal">Next Up</span>
+      <a href="profiles-redesign.html" class="cs2-next-card reveal reveal-d1">
+        <img src="assets/Homepage/profiles-redesign.png" alt="Profiles Redesign" />
+        <div class="cs2-next-info">
+          <span class="cs2-next-info-label">Klaviyo · Data / IA</span>
+          <h3>Profiles Redesign</h3>
+          <p>Rebuilt a legacy core product end-to-end — 31% faster troubleshooting for 150K+ users.</p>
+        </div>
+      </a>
+    </div>
+
   </main>
 
-  <footer class="site-footer" id="about">
-    <p>© 2026 Fidel Boamah</p>
-    <p>Designed in Figma • Built with <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a></p>
+  <footer class="home-footer">
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/fidel-boamah/" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+      <a href="mailto:fidelboamah@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+    </div>
+    <div class="footer-copy">
+      <p>&copy; 2026 Fidel Boamah</p>
+    </div>
+    <div class="footer-spacer"></div>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Scroll reveal
+    (function () {
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -48px 0px' });
+
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+
 </body>
 </html>
