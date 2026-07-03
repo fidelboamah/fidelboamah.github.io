@@ -6,23 +6,28 @@
   <title>About — Fidel Boamah</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="case-study">
+<body class="case-study about-page">
   <header class="home-header">
     <div class="home-header-left">
       <a class="home-logo" href="index.html" aria-label="Fidel Boamah — home">
-        <span class="home-logo-mark">FB</span>
         <span class="home-logo-text">Fidel Boamah</span>
       </a>
     </div>
-    <nav class="home-nav">
-      <a href="index.html">Work</a>
-      <a href="about.html" class="active">About <span class="nav-dot"></span></a>
-    </nav>
     <div class="home-header-right">
-      <button class="theme-toggle home-theme-btn" aria-label="Toggle theme">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
       </button>
+      <nav class="site-menu" aria-label="Site menu">
+        <a href="about.html">About</a>
+        <a href="https://drive.google.com/file/d/1o-JkLellA3AufnttoC6DnsCMwlauHR3e/view" target="_blank" rel="noopener">Resume</a>
+        <a href="https://www.linkedin.com/in/fidel-boamah/" target="_blank" rel="noopener">LinkedIn</a>
+        <button class="theme-toggle menu-theme" aria-label="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
+          <span class="menu-theme-label-dark">Dark mode</span>
+          <span class="menu-theme-label-light">Light mode</span>
+        </button>
+      </nav>
     </div>
   </header>
 
@@ -30,149 +35,117 @@
 
     <!-- ══════ HERO ══════ -->
     <section class="cs-hero about-hero">
-      <div class="about-grid">
-        <div class="about-text">
-          <span class="eyebrow">About</span>
-          <h1>Designing clarity into complex data.</h1>
-          <div class="about-intro">
-            <p>I'm a Senior Product Designer based in Philadelphia. For the past 7+ years I've designed complex B2B ecosystems: CRM, customer data platforms, and AI-driven insights. Most recently at <a href="https://www.klaviyo.com" target="_blank" rel="noopener">Klaviyo</a>, where I led design for AI Insights and core data management tools.</p>
-            <p>My work lives at the intersection of dense data and human decisions. The products I'm proudest of take something marketers used to spend days untangling and turn it into a clear next step they can trust.</p>
-          </div>
-        </div>
-        <img class="about-portrait" src="assets/portrait.jpg" alt="Fidel Boamah" />
+      <img class="about-portrait-round" src="assets/new_picture.png" alt="Fidel Boamah" />
+      <div class="about-intro">
+        <p>I'm a Senior Product Designer based in Atlanta. For the past 7+ years I've designed complex B2B ecosystems: CRM, customer data platforms, and AI-driven insights. Most recently at <a href="https://www.klaviyo.com" target="_blank" rel="noopener">Klaviyo</a>, where I led design for AI Insights and core data management tools.</p>
       </div>
     </section>
 
-    <!-- ══════ EXPERIENCE ══════ -->
+<!-- ══════ EXPERIENCE ══════ -->
     <section class="about-section reveal">
-      <span class="about-section-eyebrow">Experience</span>
-
-      <div class="about-rows">
-
-        <div class="about-row reveal">
-          <div class="about-row-logo">
-            <img src="assets/klaviyo-logo.png" alt="Klaviyo" />
-          </div>
-          <div class="about-row-info">
-            <h4>Klaviyo</h4>
-            <p>Senior Product Designer</p>
-          </div>
-          <span class="about-row-year">2021 – 2025</span>
-        </div>
-
-        <div class="about-row reveal reveal-d1">
-          <div class="about-row-logo" style="font-size: 11px; letter-spacing: -0.5px;">TB</div>
-          <div class="about-row-info">
-            <h4>TruckBux</h4>
-            <p>Founding Product Designer</p>
-          </div>
-          <span class="about-row-year">2018 – 2021</span>
-        </div>
-
+      <div class="about-exp-header">
+        <h2 class="about-exp-heading">Experience</h2>
+        <a href="https://drive.google.com/file/d/1o-JkLellA3AufnttoC6DnsCMwlauHR3e/view" target="_blank" rel="noopener" class="btn-secondary"><svg viewBox="0 0 16 16" fill="none"><path d="M8 3v8M4 8l4 4 4-4M3 14h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Download resume</a>
       </div>
-    </section>
 
-    <!-- ══════ EDUCATION ══════ -->
-    <section class="about-section reveal">
-      <span class="about-section-eyebrow">Education</span>
+      <div class="about-exp">
 
-      <div class="about-rows">
+        <div class="about-exp-entry reveal">
+          <span class="about-exp-years">2021 – 2025</span>
+          <h3 class="about-exp-title">Product Designer at Klaviyo</h3>
 
-        <div class="about-row reveal">
-          <div class="about-row-logo" style="font-size: 11px; font-weight: 900;">DU</div>
-          <div class="about-row-info">
-            <h4>Drexel University</h4>
-            <p>B.S. Interactive Digital Marketing · GPA 3.8</p>
+          <a class="about-exp-project" href="ai-insights.html" data-cursor-label="View case study &rarr;">
+            <p><strong>AI Insights.</strong> An AI-driven revenue engine that turns complex predictive models into actionable opportunities for B2B marketers. I led the end-to-end design, shaping how churn and lifetime-value predictions become clear next steps, and established an adaptive framework that lets AI reconfigure the interface around each opportunity.</p>
+          </a>
+
+          <a class="about-exp-project" href="profiles-redesign.html" data-cursor-label="View case study &rarr;">
+            <p><strong>Profiles Redesign.</strong> The modernization of a decade-old core product. I restructured the information architecture around how marketers actually troubleshoot, influenced a pivot from a 1:1 code migration to a full experience overhaul, and established scalable patterns for data-dense interfaces that now extend across the platform.</p>
+          </a>
+
+          <div class="about-exp-project">
+            <p><strong>Profile Deduplication Tooling.</strong> An AI-driven system for detecting and resolving duplicate profiles across the data infrastructure. I designed confidence scoring and explainability into the experience, helping marketers trust automation with their most valuable data.</p>
           </div>
-          <span class="about-row-year">2017 – 2021</span>
         </div>
 
-        <div class="about-row reveal reveal-d1">
-          <div class="about-row-logo" style="font-size: 11px; font-weight: 900;">HU</div>
-          <div class="about-row-info">
-            <h4>Harrisburg University</h4>
-            <p>M.S. Techpreneurship</p>
-          </div>
-          <span class="about-row-year">Graduate</span>
+        <div class="about-exp-entry reveal reveal-d1">
+          <span class="about-exp-years">2018 – 2021</span>
+          <h3 class="about-exp-title">Founding Product Designer at TruckBux</h3>
+          <p>Architected the 0-to-1 consumer experience for a dual-sided food ordering marketplace — from conditional menu customization and location-based discovery to a friction-free checkout.</p>
         </div>
 
       </div>
     </section>
 
-    <!-- ══════ SKILLS ══════ -->
+<!-- ══════ CURRENTLY ══════ -->
     <section class="about-section reveal">
-      <span class="about-section-eyebrow">Skills &amp; Tools</span>
+      <div class="about-currently-grid">
+        <div class="about-currently-text">
+          <h2>Beyond the work.</h2>
+          <p>When I'm not working I love to go hiking, meditate, read and make music.</p>
 
-      <div class="about-skills-grid">
-        <span class="about-skill-tag">End-to-End Product Design</span>
-        <span class="about-skill-tag">User Research</span>
-        <span class="about-skill-tag">Information Architecture</span>
-        <span class="about-skill-tag">Rapid Prototyping</span>
-        <span class="about-skill-tag">Journey Mapping</span>
-        <span class="about-skill-tag">Heuristic Evaluation</span>
-        <span class="about-skill-tag">Competitive Analysis</span>
-        <span class="about-skill-tag">Figma</span>
-        <span class="about-skill-tag">Adobe Creative Suite</span>
-        <span class="about-skill-tag">Amplitude</span>
-        <span class="about-skill-tag">Google Analytics</span>
-        <span class="about-skill-tag">SQL</span>
-        <span class="about-skill-tag">HTML / CSS / JS</span>
-        <span class="about-skill-tag">Design Systems</span>
-        <span class="about-skill-tag">AI-Driven Product Design</span>
-        <span class="about-skill-tag">Complex Data Visualization</span>
+          <div class="about-currently">
+            <div class="about-currently-item reveal reveal-d1">
+              <span>🥾</span>
+              <span>Hiking — follow my latest adventures on Strava</span>
+            </div>
+            <div class="about-currently-item reveal reveal-d2">
+              <span>🧘</span>
+              <span>Meditating, reading, and making music as Fiddy!</span>
+            </div>
+          </div>
+        </div>
+
+        <a class="strava-tile reveal reveal-d4" href="https://strava.app.link/hvaVgKpms4b" target="_blank" rel="noopener" aria-label="Follow Fidel's activity on Strava">
+        <svg class="strava-map" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="400" height="400" fill="#f2f4f0"/>
+          <path d="M-20 340 C 60 300, 90 360, 170 330 S 320 360, 420 320 L 420 420 L -20 420 Z" fill="#dbe7f0"/>
+          <ellipse cx="90" cy="120" rx="70" ry="48" fill="#e2ecdc"/>
+          <ellipse cx="310" cy="220" rx="60" ry="42" fill="#e2ecdc"/>
+          <ellipse cx="230" cy="60" rx="48" ry="30" fill="#e9f0e4"/>
+          <g stroke="#ffffff" stroke-width="6" fill="none" opacity="0.9">
+            <path d="M0 80 C 100 90, 180 60, 400 100"/>
+            <path d="M40 400 C 70 280, 140 220, 150 0"/>
+            <path d="M0 240 C 120 230, 260 260, 400 230"/>
+            <path d="M260 0 C 250 120, 300 260, 400 320"/>
+          </g>
+          <g stroke="#d9dcd6" stroke-width="2" fill="none">
+            <path d="M0 160 C 90 170, 210 140, 400 170"/>
+            <path d="M90 0 C 100 140, 60 260, 90 400"/>
+            <path d="M330 0 C 320 100, 360 200, 330 400"/>
+          </g>
+          <path d="M120 320 C 110 260, 150 230, 145 180 C 142 140, 180 120, 215 130 C 250 140, 245 185, 225 210 C 205 235, 235 260, 255 285" fill="none" stroke="#FC5200" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="120" cy="320" r="7" fill="#FC5200" stroke="#ffffff" stroke-width="3"/>
+          <circle cx="255" cy="285" r="7" fill="#FC5200" stroke="#ffffff" stroke-width="3"/>
+        </svg>
+        <div class="strava-stats">
+          <span class="strava-dist">8.2 km</span>
+          <span class="strava-elev">412 m &#8593;</span>
+        </div>
+          <div class="strava-badge">
+            <svg viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/></svg>
+          </div>
+        </a>
+      </div>
+
+      <h3 class="about-shelf-heading reveal">Music I make as <a href="https://music.apple.com/us/artist/fiddy/1719337641" target="_blank" rel="noopener">Fiddy!</a> — a few singles:</h3>
+      <div class="about-shelf about-shelf-music">
+        <a class="about-shelf-item reveal reveal-d1" href="https://music.apple.com/us/album/home-single/1886712868" target="_blank" rel="noopener">
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e6/8a/c0/e68ac09b-7377-7de0-7e77-8e2c6be93d0e/artwork.jpg/400x400bb.jpg" alt="home — Fiddy!" loading="lazy" />
+          <figcaption>home<span>Single · 2026</span></figcaption>
+        </a>
+        <a class="about-shelf-item reveal reveal-d2" href="https://music.apple.com/us/album/haaland-single/1798888536" target="_blank" rel="noopener">
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f4/67/97/f46797d7-ab79-50ff-4b4c-0fde5070ecf1/artwork.jpg/400x400bb.jpg" alt="Haaland — Fiddy!" loading="lazy" />
+          <figcaption>Haaland<span>Single · 2025</span></figcaption>
+        </a>
+        <a class="about-shelf-item reveal reveal-d3" href="https://music.apple.com/us/album/paper-single/1719434892" target="_blank" rel="noopener">
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/17/c8/c1/17c8c1d2-3ea5-a368-8ba9-386b20aadb57/artwork.jpg/400x400bb.jpg" alt="Paper — Fiddy!" loading="lazy" />
+          <figcaption>Paper<span>Single · 2023</span></figcaption>
+        </a>
       </div>
     </section>
 
-    <!-- ══════ IMPACT ══════ -->
+<!-- ══════ GET IN TOUCH ══════ -->
     <section class="about-section reveal">
-      <span class="about-section-eyebrow">Impact</span>
-      <h2>Results that speak for themselves.</h2>
-
-      <div class="about-stats-grid">
-        <div class="about-stat-cell reveal">
-          <div class="about-stat-num">$1B</div>
-          <div class="about-stat-label">Attributed revenue driven by AI Insights in a single day</div>
-        </div>
-        <div class="about-stat-cell reveal reveal-d1">
-          <div class="about-stat-num">95%</div>
-          <div class="about-stat-label">Reduction in time-to-action for surfacing growth opportunities</div>
-        </div>
-        <div class="about-stat-cell reveal reveal-d2">
-          <div class="about-stat-num">2×</div>
-          <div class="about-stat-label">Engineering delivery speed via an AI-adaptive UI framework</div>
-        </div>
-        <div class="about-stat-cell reveal reveal-d3">
-          <div class="about-stat-num">12</div>
-          <div class="about-stat-label">Components contributed to the Klaviyo Design System</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════ CURRENTLY ══════ -->
-    <section class="about-section reveal">
-      <span class="about-section-eyebrow">Currently</span>
-      <h2>Beyond the work.</h2>
-      <p>Lately I've been exploring how AI changes the craft itself: prototyping with agentic tools, pressure-testing ideas in working code, and figuring out what design looks like when the interface can reconfigure itself.</p>
-
-      <div class="about-currently">
-        <div class="about-currently-item reveal reveal-d1">
-          <span>🤖</span>
-          <span>Building portfolio projects with agentic AI tools</span>
-        </div>
-        <div class="about-currently-item reveal reveal-d2">
-          <span>📊</span>
-          <span>Digging into data visualization patterns for dense B2B interfaces</span>
-        </div>
-        <div class="about-currently-item reveal reveal-d3">
-          <span>🎧</span>
-          <span>Deep in a playlist that's equal parts Afrobeats and lo-fi</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════ GET IN TOUCH ══════ -->
-    <section class="about-section reveal">
-      <span class="about-section-eyebrow">Contact</span>
       <h2>Let's talk.</h2>
       <p>The fastest way to reach me is email. Always happy to talk shop about data-dense design, AI products, or anything in between.</p>
 

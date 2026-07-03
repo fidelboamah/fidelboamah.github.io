@@ -10,75 +10,77 @@
   <header class="home-header">
     <div class="home-header-left">
       <a class="home-logo" href="index.html" aria-label="Fidel Boamah — home">
-        <span class="home-logo-mark">FB</span>
         <span class="home-logo-text">Fidel Boamah</span>
       </a>
     </div>
-
-    <nav class="home-nav">
-      <a href="index.html" class="active">Work <span class="nav-dot"></span></a>
-      <a href="about.html">About</a>
-    </nav>
     <div class="home-header-right">
-      <button class="theme-toggle home-theme-btn" aria-label="Toggle theme">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
       </button>
+      <nav class="site-menu" aria-label="Site menu">
+        <a href="about.html">About</a>
+        <a href="https://drive.google.com/file/d/1o-JkLellA3AufnttoC6DnsCMwlauHR3e/view" target="_blank" rel="noopener">Resume</a>
+        <a href="https://www.linkedin.com/in/fidel-boamah/" target="_blank" rel="noopener">LinkedIn</a>
+        <button class="theme-toggle menu-theme" aria-label="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
+          <span class="menu-theme-label-dark">Dark mode</span>
+          <span class="menu-theme-label-light">Light mode</span>
+        </button>
+      </nav>
     </div>
   </header>
   <main>
     <section class="home-hero">
       <div class="home-hero-content">
-        <div class="badge-klaviyo">
-          Previously at <a href="https://www.klaviyo.com" target="_blank" rel="noopener">Klaviyo</a>
-        </div>
-
+        <p class="hero-eyebrow">Hi, I'm Fidel Boamah</p>
         <h1>
-          Fidel Boamah,<br />
-          <span class="text-gradient-1">Senior Product</span><br />
-          <span class="text-gradient-2">Designer</span>
+          I design B2B enterprise solutions for AI and data&#8209;dense products
         </h1>
-        
+
         <p class="home-subtitle">
-          I design AI-powered, data-rich B2B SaaS and consumer experiences that help businesses grow and delight users.
+          Previously at <a href="https://www.klaviyo.com" target="_blank" rel="noopener" class="subtitle-link">Klaviyo</a>
         </p>
-        
+
         <div class="home-hero-actions">
-          <a href="https://drive.google.com/file/d/1o-JkLellA3AufnttoC6DnsCMwlauHR3e/view" target="_blank" rel="noopener" class="btn-secondary">Resume <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3v8M4 8l4 4 4-4M3 14h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        </div>
-        
-        <div class="home-skills">
-          <span><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 1l1.5 4.5L14 7l-4.5 1.5L8 13l-1.5-4.5L2 7l4.5-1.5L8 1z"/><path d="M13 1l.75 2.25L16 4l-2.25.75L13 7l-.75-2.25L10 4l2.25-.75L13 1z" opacity=".5"/></svg> AI-Driven Design</span>
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg> Data & Analytics</span>
-          <span><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 1h4v14H3V1zm1 1v12h2V2H4zm6-1h3v14h-3V1zm1 1v12h1V2h-1zM1 14h14v1H1v-1zM7 4h2v2H7V4zm0 4h2v2H7V8zm0 4h2v2H7v-2z"/></svg> B2B SaaS</span>
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> End-to-End Product</span>
+          <a href="#work" class="btn-primary btn-scroll-hint">View my work <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3v8M4 8l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
       <div class="home-hero-visual">
-        <img src="assets/portrait.jpg" alt="Fidel Boamah" class="hero-portrait" />
+        <a href="about.html" class="hero-portrait-link" data-cursor-label="About me &rarr;" aria-label="About me">
+          <img src="assets/new_picture.png" alt="Fidel Boamah" class="hero-portrait" />
+        </a>
       </div>
     </section>
     <section class="home-work-section" id="work">
       <div class="work-header">
         <div class="work-header-left">
           <span class="work-eyebrow">SELECTED WORK</span>
-          <h2>Designing impact at scale.</h2>
         </div>
-        <a href="#work" class="view-all-link">View all work &rarr;</a>
       </div>
       <div class="home-grid">
-        <a href="ai-insights.html" class="home-card bg-purple">
+        <a href="ai-insights.html" class="home-card bg-purple home-card-wide" data-cursor-label="View case study &rarr;">
           <div class="card-content">
             <span class="card-company">KLAVIYO</span>
             <h3 class="card-title">AI Insights</h3>
-            <p class="card-desc">Leveraging AI to unlock hidden insights and revenue opportunities for marketers.</p>
+            <p class="card-desc">I spearheaded the UX to translate complex predictive models into actionable workflows. Leveraging AI to unlock hidden insights and revenue opportunities for marketers.</p>
+            <div class="card-meta">
+              <div class="card-meta-item">
+                <span class="card-meta-label">Role</span>
+                <span class="card-meta-value">Product Designer II</span>
+              </div>
+              <div class="card-meta-item">
+                <span class="card-meta-label">Timeline</span>
+                <span class="card-meta-value">April &mdash; July 2025</span>
+              </div>
+            </div>
             <span class="card-link"><span class="arrow-circle">&rarr;</span> View Case Study</span>
           </div>
           <div class="card-visual">
             <img src="assets/Homepage/AI-insights.png" alt="AI Insights UI" />
           </div>
         </a>
-        <a href="profiles-redesign.html" class="home-card bg-blue">
+        <a href="profiles-redesign.html" class="home-card bg-blue" data-cursor-label="View case study &rarr;">
           <div class="card-content">
             <span class="card-company">KLAVIYO</span>
             <h3 class="card-title">Profiles Redesign</h3>
@@ -89,23 +91,23 @@
             <img src="assets/Homepage/profiles-redesign.png" alt="Profiles Redesign UI" />
           </div>
         </a>
-        <a href="deduplication.html" class="home-card bg-pink">
+        <a href="deduplication.html" class="home-card bg-pink" data-cursor-label="<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'/><path d='M7 11V7a5 5 0 0 1 10 0v4'/></svg> Coming soon">
           <div class="card-content">
             <span class="card-company">KLAVIYO</span>
             <h3 class="card-title">Profile Deduplication Tooling</h3>
             <p class="card-desc">Designing tools to help marketers identify and merge duplicate customer profiles at scale.</p>
-            <span class="card-link" style="opacity: 0.5; cursor: default;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Coming Soon</span>
+            <span class="card-link card-link--soon" style="opacity: 0.5; cursor: default;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Coming Soon</span>
           </div>
           <div class="card-visual">
             <img src="assets/Homepage/deduplication.png" alt="Deduplication UI" />
           </div>
         </a>
-        <a href="truckbux.html" class="home-card bg-green">
+        <a href="truckbux.html" class="home-card bg-green" data-cursor-label="<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'/><path d='M7 11V7a5 5 0 0 1 10 0v4'/></svg> Coming soon">
           <div class="card-content">
             <span class="card-company">TRUCKBUX</span>
             <h3 class="card-title">Consumer Marketplace App</h3>
             <p class="card-desc">Designing an end-to-end marketplace experience connecting drivers and customers.</p>
-            <span class="card-link" style="opacity: 0.5; cursor: default;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Coming Soon</span>
+            <span class="card-link card-link--soon" style="opacity: 0.5; cursor: default;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Coming Soon</span>
           </div>
           <div class="card-visual">
             <img src="assets/Homepage/truckbux.png" alt="TruckBux UI" />
@@ -116,27 +118,27 @@
   </main>
 
   <section class="home-contact">
-    <div class="home-contact-inner">
-      <p class="home-contact-eyebrow">Get in touch</p>
-      <h2 class="home-contact-heading">Let's work together.</h2>
-      <p class="home-contact-sub">Open to full-time roles, contract work, and conversations about interesting problems.</p>
-      <div class="home-contact-actions">
-        <a href="mailto:fidelboamah@gmail.com" class="btn-primary">Email me <svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a href="https://www.linkedin.com/in/fidel-boamah/" target="_blank" rel="noopener" class="btn-secondary">LinkedIn <svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a href="https://drive.google.com/file/d/1o-JkLellA3AufnttoC6DnsCMwlauHR3e/view" target="_blank" rel="noopener" class="btn-secondary">Resume <svg viewBox="0 0 16 16" fill="none"><path d="M8 3v8M4 8l4 4 4-4M3 14h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
+    <h2 class="home-contact-heading">Let's work together.</h2>
+    <p class="home-contact-sub">Open to full-time roles, contract work, and conversations about interesting problems.</p>
+    <div class="home-contact-actions">
+      <a href="mailto:fidelboamah@gmail.com" class="btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Email me</a>
+      <a href="https://www.linkedin.com/in/fidel-boamah/" target="_blank" rel="noopener" class="btn-secondary"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V9h4v1.5A6 6 0 0 1 16 8zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn</a>
+      <a href="about.html" class="btn-secondary">About <svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="https://drive.google.com/file/d/1o-JkLellA3AufnttoC6DnsCMwlauHR3e/view" target="_blank" rel="noopener" class="btn-secondary"><svg viewBox="0 0 16 16" fill="none"><path d="M8 3v8M4 8l4 4 4-4M3 14h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Resume</a>
     </div>
   </section>
 
+  <div class="home-skills home-skills-strip">
+    <span><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 1l1.5 4.5L14 7l-4.5 1.5L8 13l-1.5-4.5L2 7l4.5-1.5L8 1z"/><path d="M13 1l.75 2.25L16 4l-2.25.75L13 7l-.75-2.25L10 4l2.25-.75L13 1z" opacity=".5"/></svg> AI-Driven Design</span>
+    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg> Data & Analytics</span>
+    <span><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 1h4v14H3V1zm1 1v12h2V2H4zm6-1h3v14h-3V1zm1 1v12h1V2h-1zM1 14h14v1H1v-1zM7 4h2v2H7V4zm0 4h2v2H7V8zm0 4h2v2H7v-2z"/></svg> B2B SaaS</span>
+    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg> End-to-End Product</span>
+  </div>
+
   <footer class="home-footer">
-    <div class="footer-socials">
-      <a href="https://www.linkedin.com/in/fidel-boamah/" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
-      <a href="mailto:fidelboamah@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
-    </div>
     <div class="footer-copy">
       <p>&copy; 2026 Fidel Boamah</p>
     </div>
-    <div class="footer-spacer"></div>
   </footer>
   <script src="script.js"></script>
 </body>

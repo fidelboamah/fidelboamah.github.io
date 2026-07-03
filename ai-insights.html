@@ -6,24 +6,29 @@
   <title>AI Insights — Fidel Boamah</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="case-study">
+<body class="case-study cs-page">
 
   <header class="home-header">
     <div class="home-header-left">
       <a class="home-logo" href="index.html" aria-label="Fidel Boamah — home">
-        <span class="home-logo-mark">FB</span>
         <span class="home-logo-text">Fidel Boamah</span>
       </a>
     </div>
-    <nav class="home-nav">
-      <a href="index.html">Work</a>
-      <a href="about.html">About</a>
-    </nav>
     <div class="home-header-right">
-      <button class="theme-toggle home-theme-btn" aria-label="Toggle theme">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
       </button>
+      <nav class="site-menu" aria-label="Site menu">
+        <a href="about.html">About</a>
+        <a href="https://drive.google.com/file/d/1o-JkLellA3AufnttoC6DnsCMwlauHR3e/view" target="_blank" rel="noopener">Resume</a>
+        <a href="https://www.linkedin.com/in/fidel-boamah/" target="_blank" rel="noopener">LinkedIn</a>
+        <button class="theme-toggle menu-theme" aria-label="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
+          <span class="menu-theme-label-dark">Dark mode</span>
+          <span class="menu-theme-label-light">Light mode</span>
+        </button>
+      </nav>
     </div>
   </header>
 
@@ -72,21 +77,21 @@
 
       <div class="cs2-accomplishments">
         <div class="cs2-accomplishment reveal">
-          <span class="cs2-num">01</span>
+          <span class="cs2-emoji">🎨</span>
           <div>
             <h4>Design</h4>
             <p>Owned end-to-end UX for AI-driven insights, from early research through final designs shipped in production.</p>
           </div>
         </div>
         <div class="cs2-accomplishment reveal reveal-d1">
-          <span class="cs2-num">02</span>
+          <span class="cs2-emoji">🔍</span>
           <div>
             <h4>Research</h4>
             <p>Led 18 user interviews across 9 industries to validate hypotheses and pressure-test design directions.</p>
           </div>
         </div>
         <div class="cs2-accomplishment reveal reveal-d2">
-          <span class="cs2-num">03</span>
+          <span class="cs2-emoji">🧩</span>
           <div>
             <h4>Framework</h4>
             <p>Established a scalable design framework for agentic intelligence features now used across the product.</p>
@@ -345,7 +350,7 @@
     <!-- ══════════════════════ NEXT UP ══════════════════════ -->
     <div class="cs2-next">
       <span class="cs2-next-label reveal">Next Up</span>
-      <a href="profiles-redesign.html" class="cs2-next-card reveal reveal-d1">
+      <a href="profiles-redesign.html" class="cs2-next-card reveal reveal-d1" data-cursor-label="View case study &rarr;">
         <img src="assets/Homepage/profiles-redesign.png" alt="Profiles Redesign" />
         <div class="cs2-next-info">
           <span class="cs2-next-info-label">Klaviyo · Data / IA</span>

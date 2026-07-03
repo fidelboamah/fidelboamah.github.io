@@ -4,6 +4,7 @@
    =========================== */
 
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
   /* Legacy/Subpage Variables */
@@ -111,6 +112,43 @@ html { scroll-behavior: smooth; }
   opacity: 0.35 !important;
 }
 
+/* Label state: pill with text (e.g. "About me →" over the portrait) */
+.cursor-ring .cursor-label {
+  display: none;
+  color: #ffffff;
+  font-family: "Satoshi", system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.cursor-ring--label {
+  width: max-content;
+  height: 44px;
+  padding: 0 20px;
+  margin: 0;
+  translate: -50% -50%;
+  border-radius: 99px;
+  background: #111111;
+  opacity: 1 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-ring--label .cursor-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.cursor-label svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
 /* Click pulse */
 .cursor-ring--click {
   width: 28px;
@@ -150,13 +188,13 @@ body.home-page {
   overflow-x: hidden;
 }
 
-/* Home Header */
+/* Home Header (shared across all pages) */
 .home-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 48px;
-  max-width: 1440px;
+  padding: 28px 48px;
+  max-width: 1360px;
   margin: 0 auto;
 }
 
@@ -191,6 +229,86 @@ body.home-page {
   border-radius: 50%;
   font-size: 13px;
   font-weight: 900;
+}
+
+/* ── Vertical site menu ── */
+.home-header { position: relative; z-index: 200; }
+
+.menu-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--home-border);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--home-text);
+  transition: background 0.2s ease;
+}
+
+.menu-toggle:hover { background: var(--btn-outline); }
+.menu-toggle svg { width: 18px; height: 18px; }
+
+.site-menu {
+  position: absolute;
+  top: calc(100% - 12px);
+  right: 48px;
+  display: none;
+  flex-direction: column;
+  min-width: 200px;
+  background: var(--home-bg);
+  border: 1px solid var(--home-border);
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.18);
+  z-index: 300;
+}
+
+body.dark-mode .site-menu { box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.6); }
+
+.site-menu.open { display: flex; }
+
+.site-menu a,
+.site-menu .menu-theme {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--home-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: background 0.15s ease;
+}
+
+.site-menu a:hover,
+.site-menu .menu-theme:hover { background: var(--btn-outline); }
+
+.site-menu .menu-theme {
+  margin-top: 8px;
+  border-top: 1px solid var(--home-border);
+  border-radius: 0 0 10px 10px;
+  padding-top: 14px;
+  color: var(--home-text-muted);
+}
+
+.menu-theme svg { width: 16px; height: 16px; }
+.menu-theme .icon-sun { display: none; }
+.menu-theme .menu-theme-label-light { display: none; }
+body.dark-mode .menu-theme .icon-moon { display: none; }
+body.dark-mode .menu-theme .icon-sun { display: block; }
+body.dark-mode .menu-theme .menu-theme-label-dark { display: none; }
+body.dark-mode .menu-theme .menu-theme-label-light { display: inline; }
+
+@media (max-width: 768px) {
+  .site-menu { right: 24px; }
 }
 
 .home-nav {
@@ -258,6 +376,20 @@ body.dark-mode .home-theme-btn .icon-sun { display: block; }
 .btn-primary:hover { opacity: 0.9; transform: scale(1.02); }
 .btn-primary svg { width: 14px; height: 14px; }
 
+/* Bouncing arrow on the "View my work" button */
+.btn-scroll-hint svg {
+  animation: arrow-bounce 1.6s ease-in-out infinite;
+}
+
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-scroll-hint svg { animation: none; }
+}
+
 .btn-secondary {
   background: transparent;
   color: var(--home-text);
@@ -282,9 +414,17 @@ body.dark-mode .btn-secondary:hover { background: rgba(255,255,255,0.05); }
   grid-template-columns: 1fr 1fr;
   align-items: center;
   max-width: 1360px;
-  margin: 40px auto 80px;
+  min-height: 74vh;
+  margin: 0 auto;
   padding: 0 48px;
   gap: 60px;
+}
+
+.hero-eyebrow {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--home-text-muted);
+  margin-bottom: 16px;
 }
 
 .home-hero-content {
@@ -328,7 +468,7 @@ body.dark-mode .badge-klaviyo a {
 }
 
 .home-hero h1 {
-  font-size: clamp(48px, 6vw, 76px);
+  font-size: clamp(32px, 3.6vw, 48px);
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.03em;
@@ -355,6 +495,13 @@ body.dark-mode .badge-klaviyo a {
   max-width: 480px;
 }
 
+.subtitle-link {
+  color: var(--home-text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .home-hero-actions {
   display: flex;
   gap: 16px;
@@ -376,6 +523,19 @@ body.dark-mode .badge-klaviyo a {
   gap: 8px;
 }
 
+/* Skills strip above the footer */
+.home-skills-strip {
+  justify-content: center;
+  gap: 40px;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 48px 48px;
+}
+
+@media (max-width: 768px) {
+  .home-skills-strip { gap: 20px; padding: 0 24px 40px; }
+}
+
 .home-hero-visual {
   position: relative;
   width: 100%;
@@ -386,30 +546,76 @@ body.dark-mode .badge-klaviyo a {
   opacity: 0;
 }
 
-.hero-portrait {
+@property --glow-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.hero-portrait-link {
+  position: relative;
+  display: block;
   width: 85%;
   max-width: 440px;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center 20%;
-  border-radius: 24px;
-  box-shadow: 0 24px 48px -12px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+}
+
+.hero-portrait-link::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: conic-gradient(from var(--glow-angle),
+    #3b82f6, #22d3ee, #34d399, #4ade80, #22d3ee, #3b82f6);
+  filter: blur(26px);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  z-index: 0;
+  animation: glow-intro 2.6s ease-in-out 0.9s 1 both;
+}
+
+/* Brief glow pulse when the page loads */
+@keyframes glow-intro {
+  0% { opacity: 0; --glow-angle: 0deg; }
+  35% { opacity: 0.75; }
+  65% { opacity: 0.75; }
+  100% { opacity: 0; --glow-angle: 180deg; }
+}
+
+.hero-portrait-link:hover {
+  transform: translateY(-4px);
+}
+
+.hero-portrait-link:hover::before {
+  opacity: 0.75;
+  animation: glow-spin 4s linear infinite;
+}
+
+@keyframes glow-spin {
+  to { --glow-angle: 360deg; }
+}
+
+.hero-portrait {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 50%;
+  box-shadow: 0 24px 48px -12px rgba(0,0,0,0.1);
 }
 
 body.dark-mode .hero-portrait {
   box-shadow: 0 24px 48px -12px rgba(0,0,0,0.6);
 }
 
-.hero-portrait:hover {
-  transform: translateY(-4px);
-}
-
 /* Home Work Section */
 .home-work-section {
-  padding: 80px 48px;
+  padding: 48px 48px 80px;
   max-width: 1360px;
   margin: 0 auto;
+  scroll-margin-top: 24px;
 }
 
 .work-header {
@@ -469,6 +675,36 @@ body.dark-mode .home-card:hover {
   box-shadow: 0 24px 48px -12px rgba(0,0,0,0.5);
 }
 
+/* Featured wide card (spans both columns) */
+.home-card-wide {
+  grid-column: 1 / -1;
+}
+
+.home-card-wide .card-content {
+  flex: 0 0 340px;
+}
+
+.home-card-wide .card-meta {
+  flex-wrap: nowrap;
+  gap: 32px;
+  white-space: nowrap;
+}
+
+.home-card-wide .card-desc {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--home-text);
+  opacity: 0.85;
+  max-width: 100%;
+}
+
+.home-card-wide .card-visual {
+  width: 62%;
+  height: 100%;
+  right: -3%;
+  bottom: -5%;
+}
+
 .bg-purple { background: var(--card-purple); }
 .bg-blue { background: var(--card-blue); }
 .bg-pink { background: var(--card-pink); }
@@ -512,6 +748,38 @@ body.dark-mode .home-card:hover {
   font-weight: 600;
   font-size: 14px;
 }
+
+/* On devices with a fine pointer the cursor pill replaces the static
+   "View Case Study" text; keep "Coming Soon" visible everywhere. */
+@media (hover: hover) and (pointer: fine) {
+  .card-link:not(.card-link--soon) { display: none; }
+}
+
+/* Case study meta (Company / Role / Timeline) on the featured card */
+.card-meta {
+  display: flex;
+  gap: 36px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.card-meta-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--home-text-muted);
+  margin-bottom: 5px;
+}
+
+.card-meta-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--home-text);
+}
+
+.home-card-wide .card-link { margin-top: 20px; }
 
 .arrow-circle {
   width: 32px;
@@ -557,22 +825,7 @@ body.dark-mode .home-card:hover {
 .home-contact {
   max-width: 1360px;
   margin: 0 auto;
-  padding: 0 48px 80px;
-}
-
-.home-contact-inner {
-  background: var(--img-frame-bg);
-  border-radius: 24px;
-  padding: 72px 64px;
-}
-
-.home-contact-eyebrow {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 16px;
+  padding: 80px 48px 120px;
 }
 
 .home-contact-heading {
@@ -599,8 +852,7 @@ body.dark-mode .home-card:hover {
 }
 
 @media (max-width: 768px) {
-  .home-contact { padding: 0 24px 60px; }
-  .home-contact-inner { padding: 48px 32px; }
+  .home-contact { padding: 60px 24px 80px; }
   .home-contact-actions { flex-direction: column; }
   .home-contact-actions a { width: 100%; justify-content: center; }
 }
@@ -644,6 +896,9 @@ body.dark-mode .home-card:hover {
   font-size: 13px;
   color: var(--home-text-muted);
 }
+
+/* Homepage footer has no social icons; keep the copyright centered */
+body.home-page .home-footer { justify-content: center; }
 
 .footer-credits a {
   text-decoration: underline;
@@ -797,11 +1052,11 @@ video.img-frame { display: block; }
 /* About Page */
 .about-hero { max-width: 1100px; margin: 0 auto; padding: 72px 48px 64px; border-bottom: 1px solid var(--line); }
 .about-hero h1 { font-size: clamp(36px, 5vw, 56px); letter-spacing: -0.03em; font-weight: 700; line-height: 1.1; margin-top: 16px; margin-bottom: 28px; }
-.about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+.about-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 64px; align-items: center; }
 .about-text { width: 100%; }
-.about-portrait { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; border-radius: 16px; }
+.about-portrait { width: 100%; max-width: 400px; justify-self: end; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; border-radius: 16px; }
 .about-hero .eyebrow { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; }
-.about-intro p { font-size: 17px; line-height: 1.75; color: var(--text-secondary); margin-bottom: 20px; letter-spacing: -0.01em; }
+.about-intro p { font-size: clamp(18px, 1.7vw, 24px); line-height: 1.7; color: var(--text-secondary); margin-bottom: 20px; letter-spacing: -0.01em; }
 .about-intro p:last-child { margin-bottom: 0; }
 .about-intro p a { text-decoration: underline; text-decoration-skip-ink: none; }
 .about-stats .stat-num { font-family: "Satoshi", system-ui, sans-serif; font-weight: 700; font-size: 44px; letter-spacing: -1.5px; line-height: 1.1; color: var(--heading-color); }
@@ -1544,17 +1799,15 @@ body.dark-mode .cs2-next-card:hover {
 
 /* Experience / Education rows */
 .about-rows {
-  border-top: 1px solid var(--line);
   margin-top: 40px;
 }
 
 .about-row {
   display: grid;
-  grid-template-columns: 52px 1fr auto;
+  grid-template-columns: 1fr auto;
   align-items: center;
   gap: 24px;
   padding: 24px 0;
-  border-bottom: 1px solid var(--line);
 }
 
 .about-row-logo {
@@ -1602,6 +1855,103 @@ body.dark-mode .cs2-next-card:hover {
   letter-spacing: -0.01em;
 }
 
+/* Experience: project write-ups under each company */
+.about-entry {
+  margin-bottom: 24px;
+}
+
+.about-projects {
+  padding-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-project h5 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.about-project h5 a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-skip-ink: none;
+}
+
+.about-project p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Book & music shelves */
+.about-shelf-heading {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--heading-color);
+  margin: 64px 0 24px;
+}
+
+.about-shelf-heading a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.about-shelf {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.about-shelf-music { grid-template-columns: repeat(3, 1fr); }
+
+.about-shelf-item {
+  display: block;
+  margin: 0;
+}
+
+.about-shelf-item img {
+  width: 100%;
+  border-radius: 12px;
+  background: var(--img-frame-bg);
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.about-shelf-books .about-shelf-item img { aspect-ratio: 2 / 3; object-fit: cover; }
+.about-shelf-music .about-shelf-item img { aspect-ratio: 1 / 1; object-fit: cover; }
+
+.about-shelf-item:hover img { transform: translateY(-4px); }
+
+.about-shelf-item figcaption {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--heading-color);
+  line-height: 1.4;
+}
+
+.about-shelf-item figcaption span {
+  display: block;
+  font-weight: 500;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .about-shelf { grid-template-columns: repeat(2, 1fr); }
+  .about-shelf-music { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .about-shelf-music { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* Skills tags */
 .about-skills-grid {
   display: flex;
@@ -1641,6 +1991,95 @@ body.dark-mode .cs2-next-card:hover {
 }
 
 .about-currently-item span:first-child { font-size: 20px; flex-shrink: 0; }
+
+.about-currently-item a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-skip-ink: none;
+}
+
+/* Currently section: text + Strava tile side by side */
+.about-currently-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 72px;
+  align-items: center;
+}
+
+.about-currently-grid .strava-tile {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .about-currently-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-currently-grid .strava-tile { margin-top: 0; }
+}
+
+/* Strava activity tile */
+.strava-tile {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 32px;
+  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.strava-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.2);
+}
+
+.strava-map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.strava-stats {
+  position: absolute;
+  left: 22px;
+  bottom: 18px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  color: #FC5200;
+}
+
+.strava-dist {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.strava-elev {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.strava-badge {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: #FC5200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.strava-badge svg { width: 30px; height: 30px; }
+
+.strava-tile:hover .strava-badge { transform: scale(1.06); }
 
 /* About stats inline */
 .about-stats-grid {
@@ -1682,6 +2121,347 @@ body.dark-mode .cs2-next-card:hover {
   gap: 16px;
   flex-wrap: wrap;
 }
+
+/* ── Experience (danielamuntyan.com-style) ── */
+.about-exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+.about-exp-heading {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: normal;
+  color: var(--heading-color);
+  margin-bottom: 0;
+}
+
+.about-exp {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  max-width: 680px;
+}
+
+@media (max-width: 600px) {
+  .about-exp-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+}
+
+.about-exp-years {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.about-exp-title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: normal;
+  color: var(--heading-color);
+  margin-bottom: 20px;
+}
+
+.about-exp-entry > p,
+.about-exp-project p {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.about-exp-project {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.about-exp-project:last-child { margin-bottom: 0; }
+
+.about-exp-project strong {
+  color: var(--heading-color);
+  font-weight: 700;
+}
+
+a.about-exp-project p { transition: color 0.2s ease; }
+
+a.about-exp-project:hover p {
+  color: var(--heading-color);
+}
+
+/* ── Case study pages typography (Manrope, matches About page) ── */
+body.cs-page,
+body.cs-page h1, body.cs-page h2, body.cs-page h3, body.cs-page h4,
+body.cs-page p, body.cs-page a, body.cs-page span, body.cs-page div {
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+}
+
+body.cs-page .cs2-hero h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+body.cs-page .cs2-hero-sub {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+body.cs-page .cs2-section h2 {
+  font-size: 24px;
+  line-height: 1.6;
+  font-weight: 600;
+  letter-spacing: normal;
+  margin-bottom: 16px;
+}
+
+body.cs-page .cs2-section > p,
+body.cs-page .cs2-body,
+body.cs-page .cs2-two-col > p,
+body.cs-page .cs2-feature p,
+body.cs-page .cs2-final-item p {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+body.cs-page .cs2-lead {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+body.cs-page .cs2-feature h3,
+body.cs-page .cs2-final-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+body.cs-page .cs2-problem-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+body.cs-page .cs2-accomplishment h4,
+body.cs-page .cs2-strategy h4 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+body.cs-page .cs2-accomplishment p,
+body.cs-page .cs2-strategy p {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+body.cs-page .cs2-problem-card p,
+body.cs-page .cs2-quote-text,
+body.cs-page .cs2-insight p,
+body.cs-page .cs2-hmw p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+/* Larger, more legible eyebrows */
+body.cs-page .cs2-eyebrow,
+body.cs-page .cs2-feature-eyebrow,
+body.cs-page .cs2-next-label,
+body.cs-page .cs2-meta-label,
+body.cs-page .cs2-hero-labels {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Accomplishments: three-column grid with emoji */
+body.cs-page .cs2-accomplishments {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+body.cs-page .cs2-accomplishment {
+  display: block;
+  padding: 0;
+}
+
+body.cs-page .cs2-emoji {
+  display: block;
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 960px) {
+  body.cs-page .cs2-accomplishments { grid-template-columns: 1fr; gap: 32px; }
+}
+
+body.cs-page .cs2-media img,
+body.cs-page .cs2-media video,
+body.cs-page .cs2-hero-media {
+  border-radius: 24px;
+}
+
+/* Quote cards match the problem-card look: no accent bar, no italics */
+body.cs-page .cs2-quote {
+  border-left: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 28px;
+}
+
+body.cs-page .cs2-quote-text {
+  font-style: normal;
+}
+
+/* Let spacing do the separating — drop horizontal rules */
+body.cs-page .cs2-section,
+body.cs-page .cs2-meta-strip { border-bottom: none; }
+body.cs-page .cs2-accomplishments,
+body.cs-page .cs2-strategies { border-top: none; }
+body.cs-page .cs2-accomplishment,
+body.cs-page .cs2-strategy { border-bottom: none; }
+
+@media (max-width: 600px) {
+  body.cs-page .cs2-hero h1 { font-size: 32px; }
+}
+
+/* ── About page layout: single centered 680px column ── */
+body.about-page .about-hero {
+  max-width: 776px;
+  margin: 0 auto;
+  padding: 64px 48px 56px;
+  display: block;
+}
+
+body.about-page .about-portrait-round {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 25%;
+  margin-bottom: 28px;
+}
+
+body.about-page .about-section {
+  max-width: 776px;
+}
+
+body.about-page .about-currently-grid {
+  display: block;
+}
+
+body.about-page .about-currently-grid .strava-tile {
+  max-width: 220px;
+  margin-top: 32px;
+}
+
+body.about-page .strava-stats { left: 14px; bottom: 12px; gap: 6px; }
+body.about-page .strava-dist { font-size: 18px; }
+body.about-page .strava-elev { font-size: 11px; }
+body.about-page .strava-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  right: 12px;
+  bottom: 12px;
+}
+body.about-page .strava-badge svg { width: 20px; height: 20px; }
+
+body.about-page .about-shelf-music {
+  grid-template-columns: repeat(3, 140px);
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  body.about-page .about-hero { padding: 40px 20px 36px; }
+  body.about-page .about-shelf-music { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ── About page typography preview (Manrope, danielamuntyan.com-style) ── */
+body.about-page,
+body.about-page main,
+body.about-page h1, body.about-page h2, body.about-page h3,
+body.about-page h4, body.about-page h5, body.about-page p,
+body.about-page a, body.about-page span, body.about-page figcaption {
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+}
+
+body.about-page .about-intro p,
+body.about-page .about-section > p,
+body.about-page .about-currently-text > p {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+body.about-page .about-section h2 {
+  font-size: 24px;
+  line-height: 1.6;
+  font-weight: 700;
+  letter-spacing: normal;
+  margin-bottom: 12px;
+}
+
+body.about-page .about-project p {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: var(--text-secondary);
+}
+
+body.about-page .about-project h5 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: normal;
+  margin-bottom: 8px;
+}
+
+body.about-page .about-row-info h4 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+body.about-page .about-row-info p,
+body.about-page .about-row-year {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+body.about-page .about-currently-item {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+body.about-page .about-shelf-heading {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+body.about-page .about-shelf-item figcaption { font-size: 14px; }
+body.about-page .about-shelf-item figcaption span { font-size: 13px; }
+body.about-page .about-stat-label { font-size: 14px; line-height: 1.6; }
 
 /* About section responsive */
 @media (max-width: 900px) {

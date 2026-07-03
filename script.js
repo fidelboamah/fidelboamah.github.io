@@ -32,6 +32,33 @@
   });
 })();
 
+// Vertical site menu: open/close, outside click, escape.
+(function () {
+  const btn = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".site-menu");
+  if (!btn || !menu) return;
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const open = menu.classList.toggle("open");
+    btn.setAttribute("aria-expanded", String(open));
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      menu.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
+    }
+  });
+})();
+
 // Custom cursor: small dot + lagging ring with lerp interpolation.
 (function () {
   // Skip on touch devices
@@ -39,6 +66,9 @@
 
   const ring = document.createElement("div");
   ring.className = "cursor-ring";
+  const cursorLabel = document.createElement("span");
+  cursorLabel.className = "cursor-label";
+  ring.appendChild(cursorLabel);
   document.body.appendChild(ring);
 
   let mouseX  = window.innerWidth  / 2;
@@ -72,10 +102,16 @@
 
   document.addEventListener("mouseover", (e) => {
     if (e.target.closest(HOVER_SEL)) ring.classList.add("cursor-ring--hover");
+    const labelled = e.target.closest("[data-cursor-label]");
+    if (labelled) {
+      cursorLabel.innerHTML = labelled.dataset.cursorLabel;
+      ring.classList.add("cursor-ring--label");
+    }
   });
 
   document.addEventListener("mouseout", (e) => {
     if (e.target.closest(HOVER_SEL)) ring.classList.remove("cursor-ring--hover");
+    if (e.target.closest("[data-cursor-label]")) ring.classList.remove("cursor-ring--label");
   });
 
   // Click pulse
