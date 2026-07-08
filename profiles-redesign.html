@@ -8,29 +8,10 @@
 </head>
 <body class="case-study cs-page">
 
-  <header class="home-header">
-    <div class="home-header-left">
-      <a class="home-logo" href="index.html" aria-label="Fidel Boamah — home">
-        <span class="home-logo-text">Fidel Boamah</span>
-      </a>
-    </div>
-    <div class="home-header-right">
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-      </button>
-      <nav class="site-menu" aria-label="Site menu">
-        <a href="about.html">About</a>
-        <a href="https://drive.google.com/file/d/1o-JkLellA3AufnttoC6DnsCMwlauHR3e/view" target="_blank" rel="noopener">Resume</a>
-        <a href="https://www.linkedin.com/in/fidel-boamah/" target="_blank" rel="noopener">LinkedIn</a>
-        <button class="theme-toggle menu-theme" aria-label="Toggle theme">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
-          <span class="menu-theme-label-dark">Dark mode</span>
-          <span class="menu-theme-label-light">Light mode</span>
-        </button>
-      </nav>
-    </div>
-  </header>
+  <a href="index.html" class="cs-back-btn" aria-label="Back to home">
+    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Home
+  </a>
 
   <main>
 
@@ -196,11 +177,15 @@
 
     <!-- ══════════════════════ BUSINESS CASE ══════════════════════ -->
     <section class="cs2-section">
-      <span class="cs2-eyebrow reveal">The Business Case</span>
-      <h2 class="reveal reveal-d1">Quantifying the cost of friction</h2>
-      <p class="reveal reveal-d2">I partnered with business analysts to translate design friction into hard numbers leadership could act on — calculating the operational drag created by the existing Profiles experience.</p>
-      <div class="cs2-media reveal reveal-d3">
-        <img src="assets/Profiles redesign/estimated costs.png" alt="Estimated cost of support friction: $10–15M in operational savings" />
+      <div class="cs2-bizcase-split">
+        <div class="cs2-bizcase-text">
+          <span class="cs2-eyebrow reveal">The Business Case</span>
+          <h2 class="reveal reveal-d1">Quantifying the cost of friction</h2>
+          <p class="cs2-body reveal reveal-d2">I partnered with business analysts to translate design friction into hard numbers leadership could act on — calculating the operational drag created by the existing Profiles experience.</p>
+        </div>
+        <div class="cs2-media cs2-media--flush reveal reveal-d3">
+          <img class="img-dark-bg" src="assets/Profiles redesign/estimated costs.png" alt="Estimated cost of support friction: $10–15M in operational savings" />
+        </div>
       </div>
     </section>
 
@@ -245,7 +230,7 @@
           <h3 class="reveal reveal-d1">Information architecture</h3>
           <p class="reveal reveal-d2">We locked the information architecture before designing layouts — elevating consent status in the hierarchy so it's immediately visible to anyone troubleshooting a profile.</p>
           <div class="cs2-media reveal reveal-d3">
-            <img src="assets/Profiles redesign/information architecture.png" alt="Information architecture for the redesigned profile page" style="aspect-ratio: 1780/910;" />
+            <img class="img-dark-bg" src="assets/Profiles redesign/information architecture.png" alt="Information architecture for the redesigned profile page" style="aspect-ratio: 1780/910;" />
           </div>
         </div>
 

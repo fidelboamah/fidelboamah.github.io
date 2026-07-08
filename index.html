@@ -14,6 +14,14 @@
       </a>
     </div>
     <div class="home-header-right">
+      <nav class="home-nav home-nav-inline" aria-label="Primary">
+        <a href="about.html">About</a>
+        <a href="https://drive.google.com/file/d/1o-JkLellA3AufnttoC6DnsCMwlauHR3e/view" target="_blank" rel="noopener">Resume</a>
+      </nav>
+      <div class="nav-socials" aria-label="Contact links">
+        <a href="https://www.linkedin.com/in/fidel-boamah/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V9h4v1.5A6 6 0 0 1 16 8zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="mailto:fidelboamah@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+      </div>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
       </button>
@@ -33,17 +41,21 @@
   <main>
     <section class="home-hero">
       <div class="home-hero-content">
-        <p class="hero-eyebrow">Hi, I'm Fidel Boamah</p>
         <h1>
-          I design B2B enterprise solutions for AI and data&#8209;dense products
+          I design B2B enterprise solutions for AI and data&#8209;dense products.
         </h1>
 
-        <p class="home-subtitle">
+        <p class="hero-sub">
+          I help teams turn complex data and AI capabilities into intuitive experiences that drive clarity, action, and measurable impact.
+        </p>
+
+        <p class="home-subtitle hero-prev">
           Previously at <a href="https://www.klaviyo.com" target="_blank" rel="noopener" class="subtitle-link">Klaviyo</a>
         </p>
 
         <div class="home-hero-actions">
           <a href="#work" class="btn-primary btn-scroll-hint">View my work <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3v8M4 8l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="about.html" class="btn-secondary">About me <svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
       <div class="home-hero-visual">
@@ -52,18 +64,22 @@
         </a>
       </div>
     </section>
+
     <section class="home-work-section" id="work">
       <div class="work-header">
         <div class="work-header-left">
-          <span class="work-eyebrow">SELECTED WORK</span>
+          <h2>Selected Work</h2>
         </div>
       </div>
       <div class="home-grid">
-        <a href="ai-insights.html" class="home-card bg-purple home-card-wide" data-cursor-label="View case study &rarr;">
-          <div class="card-content">
+        <a href="ai-insights.html" class="work-feature work-feature--hero">
+          <div class="work-feature-text">
             <span class="card-company">KLAVIYO</span>
-            <h3 class="card-title">AI Insights</h3>
-            <p class="card-desc">I spearheaded the UX to translate complex predictive models into actionable workflows. Leveraging AI to unlock hidden insights and revenue opportunities for marketers.</p>
+            <h3>AI Insights</h3>
+            <div class="card-tags work-feature-tags">
+              <span>AI/ML</span><span>Analytics</span><span>Marketing Tech</span>
+            </div>
+            <p class="work-feature-desc">I spearheaded the UX to translate complex predictive models into actionable workflows, leveraging AI to unlock hidden insights and revenue opportunities for marketers.</p>
             <div class="card-meta">
               <div class="card-meta-item">
                 <span class="card-meta-label">Role</span>
@@ -73,53 +89,80 @@
                 <span class="card-meta-label">Timeline</span>
                 <span class="card-meta-value">April &mdash; July 2025</span>
               </div>
+              <div class="card-meta-item">
+                <span class="card-meta-label">Impact</span>
+                <span class="card-meta-value card-meta-impact"><svg viewBox="0 0 16 16" fill="none"><path d="M8 13V3M4 7l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> 25% attributed revenue</span>
+              </div>
             </div>
-            <span class="card-link"><span class="arrow-circle">&rarr;</span> View Case Study</span>
+            <span class="btn-secondary work-feature-cta">Read more</span>
           </div>
-          <div class="card-visual">
+          <div class="work-feature-visual">
             <img src="assets/Homepage/AI-insights.png" alt="AI Insights UI" />
           </div>
         </a>
-        <a href="profiles-redesign.html" class="home-card bg-blue" data-cursor-label="View case study &rarr;">
-          <div class="card-content">
+        <a href="profiles-redesign.html" class="work-feature">
+          <div class="work-feature-text">
             <span class="card-company">KLAVIYO</span>
-            <h3 class="card-title">Profiles Redesign</h3>
-            <p class="card-desc">Led the end-to-end modernization of a legacy core product to align with marketer workflows.</p>
-            <span class="card-link"><span class="arrow-circle">&rarr;</span> View Case Study</span>
+            <h3>Profiles Redesign</h3>
+            <div class="card-tags work-feature-tags">
+              <span>Data</span><span>Information Architecture</span>
+            </div>
+            <p class="work-feature-desc">Led the end-to-end modernization of a legacy core product to align with marketer workflows.</p>
+            <div class="card-meta">
+              <div class="card-meta-item">
+                <span class="card-meta-label">Role</span>
+                <span class="card-meta-value">Product Designer</span>
+              </div>
+              <div class="card-meta-item">
+                <span class="card-meta-label">Timeline</span>
+                <span class="card-meta-value">Jan &mdash; Jun 2023</span>
+              </div>
+              <div class="card-meta-item">
+                <span class="card-meta-label">Impact</span>
+                <span class="card-meta-value card-meta-impact"><svg viewBox="0 0 16 16" fill="none"><path d="M8 13V3M4 7l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> 31% faster troubleshooting</span>
+              </div>
+            </div>
+            <span class="btn-secondary work-feature-cta">Read more</span>
           </div>
-          <div class="card-visual">
+          <div class="work-feature-visual">
             <img src="assets/Homepage/profiles-redesign.png" alt="Profiles Redesign UI" />
           </div>
         </a>
-        <a href="deduplication.html" class="home-card bg-pink" data-cursor-label="<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'/><path d='M7 11V7a5 5 0 0 1 10 0v4'/></svg> Coming soon">
-          <div class="card-content">
+        <div class="work-feature work-feature-soon">
+          <div class="work-feature-text">
             <span class="card-company">KLAVIYO</span>
-            <h3 class="card-title">Profile Deduplication Tooling</h3>
-            <p class="card-desc">Designing tools to help marketers identify and merge duplicate customer profiles at scale.</p>
-            <span class="card-link card-link--soon" style="opacity: 0.5; cursor: default;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Coming Soon</span>
+            <h3>Profile Deduplication Tooling</h3>
+            <div class="card-tags work-feature-tags">
+              <span>Data Quality</span><span>Workflow Design</span><span>Tooling</span>
+            </div>
+            <p class="work-feature-desc">Designing tools to help marketers identify and merge duplicate customer profiles at scale.</p>
+            <span class="card-link card-link--soon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Coming Soon</span>
           </div>
-          <div class="card-visual">
+          <div class="work-feature-visual">
             <img src="assets/Homepage/deduplication.png" alt="Deduplication UI" />
           </div>
-        </a>
-        <a href="truckbux.html" class="home-card bg-green" data-cursor-label="<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'/><path d='M7 11V7a5 5 0 0 1 10 0v4'/></svg> Coming soon">
-          <div class="card-content">
+        </div>
+        <div class="work-feature work-feature-soon">
+          <div class="work-feature-text">
             <span class="card-company">TRUCKBUX</span>
-            <h3 class="card-title">Consumer Marketplace App</h3>
-            <p class="card-desc">Designing an end-to-end marketplace experience connecting drivers and customers.</p>
-            <span class="card-link card-link--soon" style="opacity: 0.5; cursor: default;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Coming Soon</span>
+            <h3>Consumer Marketplace App</h3>
+            <div class="card-tags work-feature-tags">
+              <span>Marketplace</span><span>Mobile UX</span><span>End-to-End</span>
+            </div>
+            <p class="work-feature-desc">Designing an end-to-end marketplace experience connecting drivers and customers.</p>
+            <span class="card-link card-link--soon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Coming Soon</span>
           </div>
-          <div class="card-visual">
+          <div class="work-feature-visual">
             <img src="assets/Homepage/truckbux.png" alt="TruckBux UI" />
           </div>
-        </a>
+        </div>
       </div>
     </section>
   </main>
 
   <section class="home-contact">
-    <h2 class="home-contact-heading">Let's work together.</h2>
-    <p class="home-contact-sub">Open to full-time roles, contract work, and conversations about interesting problems.</p>
+    <h2 class="home-contact-heading">Let's build impactful products.</h2>
+    <p class="home-contact-sub">Open to Senior Product Designer roles in B2B SaaS, AI, and data platforms &mdash; full-time, contract, or collaborations on interesting problems.</p>
     <div class="home-contact-actions">
       <a href="mailto:fidelboamah@gmail.com" class="btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Email me</a>
       <a href="https://www.linkedin.com/in/fidel-boamah/" target="_blank" rel="noopener" class="btn-secondary"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V9h4v1.5A6 6 0 0 1 16 8zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn</a>
@@ -127,13 +170,6 @@
       <a href="https://drive.google.com/file/d/1o-JkLellA3AufnttoC6DnsCMwlauHR3e/view" target="_blank" rel="noopener" class="btn-secondary"><svg viewBox="0 0 16 16" fill="none"><path d="M8 3v8M4 8l4 4 4-4M3 14h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Resume</a>
     </div>
   </section>
-
-  <div class="home-skills home-skills-strip">
-    <span><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 1l1.5 4.5L14 7l-4.5 1.5L8 13l-1.5-4.5L2 7l4.5-1.5L8 1z"/><path d="M13 1l.75 2.25L16 4l-2.25.75L13 7l-.75-2.25L10 4l2.25-.75L13 1z" opacity=".5"/></svg> AI-Driven Design</span>
-    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg> Data & Analytics</span>
-    <span><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 1h4v14H3V1zm1 1v12h2V2H4zm6-1h3v14h-3V1zm1 1v12h1V2h-1zM1 14h14v1H1v-1zM7 4h2v2H7V4zm0 4h2v2H7V8zm0 4h2v2H7v-2z"/></svg> B2B SaaS</span>
-    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg> End-to-End Product</span>
-  </div>
 
   <footer class="home-footer">
     <div class="footer-copy">
