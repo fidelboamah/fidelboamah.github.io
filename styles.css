@@ -3,7 +3,7 @@
    (Global & Variables)
    =========================== */
 
-@import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap');
+/* Manrope — the single typeface across every page */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
@@ -44,6 +44,11 @@
   --card-blue: #f0f7ff;
   --card-pink: #fff0f2;
   --card-green: #f0fdf4;
+
+  /* Season-Mix-style display font (Hanken Grotesk stand-in) */
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  /* Blue pulled from the avatar — used for text-link hovers */
+  --link-blue: #2b50e9;
 }
 
 body.dark-mode {
@@ -91,12 +96,12 @@ html { scroll-behavior: smooth; }
   position: fixed;
   top: 0;
   left: 0;
-  width: 29px;
-  height: 29px;
+  width: 23px;
+  height: 23px;
   border-radius: 50%;
-  background: rgba(107, 115, 255, 0.4);
-  margin-left: -14.5px;
-  margin-top: -14.5px;
+  background: rgba(128, 128, 128, 0.4);
+  margin-left: -11.5px;
+  margin-top: -11.5px;
   pointer-events: none;
   z-index: 99999;
   opacity: 0;
@@ -105,10 +110,10 @@ html { scroll-behavior: smooth; }
 }
 
 .cursor-ring--hover {
-  width: 42px;
-  height: 42px;
-  margin-left: -21px;
-  margin-top: -21px;
+  width: 34px;
+  height: 34px;
+  margin-left: -17px;
+  margin-top: -17px;
   opacity: 0.35 !important;
 }
 
@@ -116,7 +121,7 @@ html { scroll-behavior: smooth; }
 .cursor-ring .cursor-label {
   display: none;
   color: #ffffff;
-  font-family: "Satoshi", system-ui, sans-serif;
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
   font-size: 12px;
   font-weight: 600;
   white-space: nowrap;
@@ -151,10 +156,10 @@ html { scroll-behavior: smooth; }
 
 /* Click pulse */
 .cursor-ring--click {
-  width: 22px;
-  height: 22px;
-  margin-left: -11px;
-  margin-top: -11px;
+  width: 18px;
+  height: 18px;
+  margin-left: -9px;
+  margin-top: -9px;
 }
 
 /* Touch devices: restore default cursor */
@@ -166,7 +171,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text-primary);
-  font-family: "Satoshi", system-ui, sans-serif;
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
   font-weight: 400;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -175,6 +180,8 @@ body {
 }
 
 img { display: block; max-width: 100%; }
+/* Form controls don't inherit type by default */
+button, input, select, textarea { font-family: inherit; }
 a { color: inherit; text-decoration: none; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--text-primary); outline-offset: 3px; }
 
@@ -955,7 +962,7 @@ body.home-page .home-footer { justify-content: center; }
 .logo:hover { transform: scale(1.05); }
 .logo svg { width: 100%; height: 100%; }
 .logo .oct { fill: var(--pill-active-bg); stroke: var(--pill-active-bg); transition: fill 0.3s ease, stroke 0.3s ease; }
-.logo text { fill: var(--pill-active-text); font-family: "Satoshi", system-ui, sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.5px; transition: fill 0.3s ease; }
+.logo text { fill: var(--pill-active-text); font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.5px; transition: fill 0.3s ease; }
 
 .cs-nav-pill { grid-column: 2; display: flex; gap: 4px; align-items: center; background: var(--pill-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--pill-border); border-radius: 9999px; padding: 4px; box-shadow: var(--pill-shadow); transition: background 0.3s ease, border-color 0.3s ease; }
 .cs-nav-pill a { height: 34px; display: flex; align-items: center; justify-content: center; padding: 0 20px; border-radius: 9999px; font-weight: 500; font-size: 14px; color: var(--text-label); transition: background 0.2s ease, color 0.2s ease; }
@@ -974,23 +981,23 @@ body.dark-mode .cs-theme-toggle .icon-sun { display: block; }
 body.case-study { background: var(--bg-light); color: var(--heading-color); }
 body.case-study.dark-mode { color: var(--text-primary); }
 .cs-hero { max-width: 852px; margin: 0 auto; padding: 96px 24px 48px; }
-.cs-hero h1 { font-family: "Satoshi", system-ui, sans-serif; font-weight: 500; font-size: 42px; letter-spacing: -2.1px; color: var(--text-primary); margin-bottom: 32px; }
+.cs-hero h1 { font-family: var(--font-display); font-weight: 600; font-size: 42px; letter-spacing: -1.4px; color: var(--text-primary); margin-bottom: 32px; }
 .cs-hero-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; }
-.cs-meta-table .label { font-family: "Satoshi", system-ui, sans-serif; font-weight: 700; font-size: 15px; color: var(--text-label); margin-top: 18px; }
+.cs-meta-table .label { font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 700; font-size: 15px; color: var(--text-label); margin-top: 18px; }
 .cs-meta-table .label:first-child { margin-top: 0; }
 .cs-meta-table .value { font-size: 21px; letter-spacing: -0.17px; line-height: 1.625; color: var(--text-muted); margin-bottom: 4px; }
-.cs-hero-text .label { font-family: "Satoshi", system-ui, sans-serif; font-weight: 700; font-size: 15px; color: var(--text-label); margin-bottom: 12px; display: block; }
+.cs-hero-text .label { font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 700; font-size: 15px; color: var(--text-label); margin-bottom: 12px; display: block; }
 .cs-hero-text p { font-size: 21px; letter-spacing: -0.17px; line-height: 1.625; color: var(--text-primary); margin-bottom: 28px; }
 .cs-hero-text p:last-child { margin-bottom: 0; }
 .cs-divider { border: none; border-top: 1px solid var(--line); max-width: 1100px; margin: 0 auto; }
-.cs-cta { display: inline-block; margin: 56px auto 0; padding: 18px 40px; border: 1px solid var(--card-border); border-radius: 44px; background: var(--card-bg); color: var(--text-primary); font-family: "Satoshi", system-ui, sans-serif; font-weight: 500; font-size: 15px; text-align: center; transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease; }
+.cs-cta { display: inline-block; margin: 56px auto 0; padding: 18px 40px; border: 1px solid var(--card-border); border-radius: 44px; background: var(--card-bg); color: var(--text-primary); font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 500; font-size: 15px; text-align: center; transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease; }
 .cs-cta:hover { background: var(--pill-active-bg); border-color: var(--pill-active-bg); color: var(--pill-active-text); }
 .cs-cta-wrap { text-align: left; margin-top: 32px; }
 .cs-content { max-width: 852px; margin: 0 auto; padding: 0 24px 112px; display: flex; flex-direction: column; gap: 75px; }
 .cs-section { scroll-margin-top: 32px; }
-.cs-section .eyebrow { font-family: "Satoshi", system-ui, sans-serif; font-weight: 700; font-size: 15px; color: var(--text-label); margin-bottom: 10px; display: block; }
-.cs-section h2 { font-family: "Satoshi", system-ui, sans-serif; font-weight: 500; font-size: 32px; letter-spacing: -0.64px; line-height: 1.25; margin-bottom: 32px; color: var(--heading-color); }
-.cs-section h3 { font-family: "Satoshi", system-ui, sans-serif; font-weight: 500; font-size: 26px; letter-spacing: -0.52px; line-height: 1.2; margin-top: 64px; margin-bottom: 20px; color: var(--heading-color); }
+.cs-section .eyebrow { font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 700; font-size: 15px; color: var(--text-label); margin-bottom: 10px; display: block; }
+.cs-section h2 { font-family: var(--font-display); font-weight: 600; font-size: 32px; letter-spacing: -0.64px; line-height: 1.25; margin-bottom: 32px; color: var(--heading-color); }
+.cs-section h3 { font-family: var(--font-display); font-weight: 600; font-size: 26px; letter-spacing: -0.52px; line-height: 1.2; margin-top: 64px; margin-bottom: 20px; color: var(--heading-color); }
 .cs-section h2 + h3, .cs-section h3:first-child { margin-top: 0; }
 .cs-section p { font-size: 21px; letter-spacing: -0.17px; line-height: 1.625; margin-bottom: 28px; color: var(--text-primary); }
 .cs-section p:last-child { margin-bottom: 0; }
@@ -998,14 +1005,14 @@ body.case-study.dark-mode { color: var(--text-primary); }
 video.img-frame { display: block; }
 .img-frame.placeholder { display: flex; align-items: center; justify-content: center; font-size: 14px; }
 .cs-section img.on-dark { background: #1b1b1f; padding: 28px; box-sizing: border-box; object-fit: contain; border: 1px solid rgba(255, 255, 255, 0.08); }
-.cs-caption { font-family: "Satoshi", system-ui, sans-serif; font-weight: 500; font-size: 13px; letter-spacing: -0.65px; color: var(--text-label); text-align: right; margin-top: -16px; margin-bottom: 24px; }
+.cs-caption { font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 500; font-size: 13px; letter-spacing: -0.65px; color: var(--text-label); text-align: right; margin-top: -16px; margin-bottom: 24px; }
 .cs-row { display: flex; gap: 65px; align-items: flex-start; margin-top: 16px; }
 .cs-row > * { flex: 1; }
 .cs-row img, .cs-row .img-frame { margin: 0; border-radius: 15px; flex: 0 0 340px; width: 340px; min-width: 0; }
 .cs-cards { display: flex; flex-direction: column; gap: 24px; margin-top: 24px; }
 .cs-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 24px; padding: 42px; transition: background 0.25s ease, border-color 0.25s ease; }
 .cs-card.accent { border-left: 4px solid var(--accent); }
-.cs-card h4 { font-family: "Satoshi", system-ui, sans-serif; font-weight: 600; font-size: 20px; color: var(--text-secondary); margin-bottom: 16px; }
+.cs-card h4 { font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 600; font-size: 20px; color: var(--text-secondary); margin-bottom: 16px; }
 .cs-card p { font-size: 16px; letter-spacing: normal; line-height: 1.6; color: var(--text-primary); margin: 0; }
 .cs-cards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 24px; }
 .cs-cards-grid .cs-card { display: flex; flex-direction: column; gap: 12px; }
@@ -1013,28 +1020,28 @@ video.img-frame { display: block; }
 .cs-emoji-cards + h3 { margin-top: 32px; }
 .cs-emoji-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 24px; padding: 42px; display: flex; align-items: center; gap: 24px; transition: background 0.25s ease, border-color 0.25s ease; }
 .cs-emoji-card .emoji { font-size: 64px; flex-shrink: 0; }
-.cs-emoji-card h4 { font-family: "Satoshi", system-ui, sans-serif; font-weight: 600; font-size: 20px; color: var(--text-secondary); margin-bottom: 8px; }
+.cs-emoji-card h4 { font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 600; font-size: 20px; color: var(--text-secondary); margin-bottom: 8px; }
 .cs-emoji-card p { font-size: 16px; letter-spacing: normal; line-height: 1.6; color: var(--text-primary); margin: 0; }
-.cs-ordered { font-family: "Satoshi", system-ui, sans-serif; font-weight: 500; font-size: 28px; letter-spacing: -1.4px; line-height: 1.5; margin: 64px 0 28px 28px; color: var(--heading-color); }
+.cs-ordered { font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 500; font-size: 28px; letter-spacing: -1.4px; line-height: 1.5; margin: 64px 0 28px 28px; color: var(--heading-color); }
 .cs-ordered ~ .cs-ordered { margin-top: 96px; }
 .cs-section > .cs-card { margin: 40px 0 48px; }
 .cs-section > .cs-card p { font-size: 21px; letter-spacing: -0.17px; line-height: 1.6; }
 
 /* Diagrams */
 .cs-diagram { padding: 32px; color: var(--heading-color); }
-.cs-diagram .dg-title { font-family: "Satoshi", system-ui, sans-serif; font-weight: 700; font-size: 15px; color: var(--text-label); margin-bottom: 28px; }
+.cs-diagram .dg-title { font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 700; font-size: 15px; color: var(--text-label); margin-bottom: 28px; }
 .cs-diagram .dg-row { display: flex; align-items: center; justify-content: space-around; gap: 16px; padding-bottom: 8px; }
 .cs-diagram .dg-item { text-align: center; }
 .cs-diagram .dg-braces { display: block; height: 56px; line-height: 56px; font-size: 46px; font-weight: 300; }
 .cs-diagram .dg-atom { display: block; width: 56px; height: 56px; margin: 0 auto; }
-.cs-diagram .dg-label { font-family: "Satoshi", system-ui, sans-serif; font-weight: 500; font-size: 16px; margin-top: 14px; color: var(--text-primary); }
+.cs-diagram .dg-label { font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 500; font-size: 16px; margin-top: 14px; color: var(--text-primary); }
 .cs-diagram .dg-arrow { font-size: 28px; color: var(--text-muted); }
-.cs-diagram .dg-figure { font-family: "Satoshi", system-ui, sans-serif; font-weight: 700; font-size: 56px; letter-spacing: -2px; line-height: 1.15; margin-bottom: 10px; }
+.cs-diagram .dg-figure { font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 700; font-size: 56px; letter-spacing: -2px; line-height: 1.15; margin-bottom: 10px; }
 .cs-diagram .dg-sub { font-size: 16px; color: var(--text-muted); }
 
 /* Maturity Scale Component */
 .maturity-scale { position: relative; display: flex; justify-content: space-between; gap: 32px; padding: 56px 48px 40px; margin: 40px 0; border-radius: 15px; background: var(--img-frame-bg); transition: background 0.25s ease; }
-.ms-title { position: absolute; top: 112px; left: 0; right: 0; text-align: center; font-family: "Satoshi", system-ui, sans-serif; font-weight: 700; font-size: 16px; color: var(--heading-color); }
+.ms-title { position: absolute; top: 112px; left: 0; right: 0; text-align: center; font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 700; font-size: 16px; color: var(--heading-color); }
 .ms-axis { position: absolute; left: 28px; right: 28px; top: 144px; height: 1.5px; background: var(--text-muted); opacity: 0.55; color: var(--text-muted); }
 .ms-axis::before, .ms-axis::after { content: ""; position: absolute; top: -4.5px; width: 10px; height: 10px; border-left: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; }
 .ms-axis::before { left: 0; transform: rotate(45deg); }
@@ -1044,9 +1051,9 @@ video.img-frame { display: block; }
 .ms-card--smb { background: #d8b491; }
 .ms-card--ent { background: #c8dbf7; }
 .ms-icon { display: block; width: 46px; height: 46px; margin: 0 auto 18px; }
-.ms-name { font-family: "Satoshi", system-ui, sans-serif; font-weight: 700; font-size: 17px; }
+.ms-name { font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 700; font-size: 17px; }
 .ms-events { font-size: 13.5px; margin-top: 4px; }
-.ms-label { font-family: "Satoshi", system-ui, sans-serif; font-weight: 700; font-size: 16px; margin-top: 22px; color: var(--heading-color); }
+.ms-label { font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 700; font-size: 16px; margin-top: 22px; color: var(--heading-color); }
 .ms-quote { font-size: 16px; line-height: 1.45; margin-top: 10px; text-align: center; color: var(--text-secondary); }
 
 /* About Page */
@@ -1059,7 +1066,7 @@ video.img-frame { display: block; }
 .about-intro p { font-size: clamp(18px, 1.7vw, 24px); line-height: 1.7; color: var(--text-secondary); margin-bottom: 20px; letter-spacing: -0.01em; }
 .about-intro p:last-child { margin-bottom: 0; }
 .about-intro p a { text-decoration: underline; text-decoration-skip-ink: none; }
-.about-stats .stat-num { font-family: "Satoshi", system-ui, sans-serif; font-weight: 700; font-size: 44px; letter-spacing: -1.5px; line-height: 1.1; color: var(--heading-color); }
+.about-stats .stat-num { font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-weight: 700; font-size: 44px; letter-spacing: -1.5px; line-height: 1.1; color: var(--heading-color); }
 .cs-section a:not(.cs-cta) { text-decoration: underline; text-decoration-skip-ink: none; }
 
 /* Subpage Footer */
@@ -1121,13 +1128,13 @@ video.img-frame { display: block; }
   max-width: 1100px;
   margin: 0 auto;
   padding: 72px 48px 56px;
-  text-align: center;
+  text-align: left;
 }
 
 .cs2-hero-labels {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px;
   font-size: 11px;
   font-weight: 700;
@@ -1140,6 +1147,7 @@ video.img-frame { display: block; }
 .cs2-hero-labels span { line-height: 1; }
 
 .cs2-hero h1 {
+  font-family: var(--font-display);
   font-size: clamp(44px, 7vw, 88px);
   font-weight: 700;
   letter-spacing: -0.04em;
@@ -1152,12 +1160,12 @@ video.img-frame { display: block; }
   font-size: 20px;
   line-height: 1.55;
   color: var(--text-secondary);
-  max-width: 580px;
+  max-width: 640px;
   margin-bottom: 52px;
   letter-spacing: -0.01em;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .cs2-hero-media {
@@ -1224,6 +1232,7 @@ video.img-frame { display: block; }
   margin: 0 auto;
   padding: 80px 48px;
   border-bottom: 1px solid var(--line);
+  scroll-margin-top: 24px;
 }
 
 .cs2-section:last-of-type { border-bottom: none; }
@@ -1239,6 +1248,7 @@ video.img-frame { display: block; }
 }
 
 .cs2-section h2 {
+  font-family: var(--font-display);
   font-size: clamp(26px, 3.2vw, 40px);
   font-weight: 700;
   letter-spacing: -0.025em;
@@ -1486,6 +1496,7 @@ body.dark-mode .cs2-media video {
 }
 
 .cs2-feature h3 {
+  font-family: var(--font-display);
   font-size: 26px;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -1721,7 +1732,7 @@ body.dark-mode .cs2-next-card:hover {
   line-height: 1;
   color: var(--heading-color);
   letter-spacing: -4px;
-  font-family: "Satoshi", monospace;
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
 }
 
 .cs2-diagram-icon {
@@ -2127,7 +2138,8 @@ body.dark-mode .cs2-next-card:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 680px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--home-border);
   margin-bottom: 40px;
 }
 
@@ -2143,7 +2155,6 @@ body.dark-mode .cs2-next-card:hover {
   display: flex;
   flex-direction: column;
   gap: 56px;
-  max-width: 680px;
 }
 
 @media (max-width: 600px) {
@@ -2178,7 +2189,7 @@ body.dark-mode .cs2-next-card:hover {
 
 .about-exp-project {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .about-exp-project:last-child { margin-bottom: 0; }
@@ -2393,15 +2404,6 @@ body.about-page .about-shelf-music {
   body.about-page .about-shelf-music { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* ── About page typography preview (Manrope, danielamuntyan.com-style) ── */
-body.about-page,
-body.about-page main,
-body.about-page h1, body.about-page h2, body.about-page h3,
-body.about-page h4, body.about-page h5, body.about-page p,
-body.about-page a, body.about-page span, body.about-page figcaption {
-  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
-}
-
 body.about-page .about-intro p,
 body.about-page .about-section > p,
 body.about-page .about-currently-text > p {
@@ -2410,6 +2412,9 @@ body.about-page .about-currently-text > p {
   font-weight: 500;
   letter-spacing: normal;
 }
+
+/* Experience runs larger than the other section headings */
+body.about-page .about-section h2.about-exp-heading { font-size: 28px; }
 
 body.about-page .about-section h2 {
   font-size: 24px;
@@ -2852,10 +2857,10 @@ body.dark-mode .card-visual::before { background: rgba(255, 255, 255, 0.06); }
 /* Hero impact stat chips */
 .cs2-hero-stats {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 12px;
-  margin: -28px auto 48px;
+  margin: -28px 0 48px;
 }
 
 .cs2-hero-stats span {
@@ -2874,6 +2879,18 @@ body.dark-mode .card-visual::before { background: rgba(255, 255, 255, 0.06); }
   color: var(--heading-color);
   font-weight: 700;
 }
+
+/* Trend arrows: direction shows which way the metric moved; every
+   arrow is green, since a fall in time-on-task or tickets is a win too.
+   The pill itself stays neutral. */
+.cs2-trend {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  align-self: center;
+  color: #1a7f37;
+}
+body.dark-mode .cs2-trend { color: #3fb950; }
 
 /* Why-it-failed grid */
 .cs2-fail-grid {
@@ -3373,39 +3390,31 @@ body.cs-page .cs2-insight p { font-size: 20px; line-height: 1.6; }
 }
 
 /* Case study pages: floating back-home button (replaces nav) */
+/* Plain text link at the head of the left column, above the contents list */
 .cs-back-btn {
   position: fixed;
-  top: 24px;
-  left: 24px;
+  top: 65px; /* centres on the hero's "Klaviyo" label */
+  left: 48px;
   z-index: 500;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border-radius: 99px;
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--line);
-  font-size: 14px;
-  font-weight: 600;
+  gap: 12px;
+  padding: 0;
+  font-size: 17px;
+  font-weight: 500;
   color: var(--text-primary);
-  box-shadow: 0 6px 20px -8px rgba(0, 0, 0, 0.12);
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.cs-back-btn svg { width: 14px; height: 14px; }
-.cs-back-btn:hover { transform: translateX(-2px); background: rgba(255, 255, 255, 0.95); }
-
-body.dark-mode .cs-back-btn {
-  background: rgba(20, 20, 20, 0.82);
-  color: var(--text-primary);
-}
-
-body.dark-mode .cs-back-btn:hover { background: rgba(30, 30, 30, 0.95); }
+.cs-back-btn svg { width: 17px; height: 17px; }
+.cs-back-btn:hover { transform: translateX(-3px); color: var(--link-blue); }
 
 @media (max-width: 768px) {
-  .cs-back-btn { top: 16px; left: 16px; padding: 9px 15px; }
+  /* No side column here, so let it scroll away with the page instead of
+     floating over the content as plain text. Sits on the hero's own 24px
+     gutter, with room below it before the company label. */
+  .cs-back-btn { position: absolute; top: 36px; left: 24px; font-size: 16px; }
+  .cs2-hero { padding-top: 88px; }
 }
 
 /* Hamburger menu: tablet/mobile only (inline nav covers desktop) */
@@ -3487,15 +3496,6 @@ body.dark-mode .cs-back-btn:hover { background: rgba(30, 30, 30, 0.95); }
 }
 
 
-/* FigJam-style dotted grid background (homepage) */
-body.home-page {
-  background-image: radial-gradient(circle, rgba(17, 17, 17, 0.10) 1.1px, transparent 1.1px);
-  background-size: 22px 22px;
-}
-
-body.home-page.dark-mode {
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.09) 1.1px, transparent 1.1px);
-}
 
 /* Nav social buttons (LinkedIn, email, resume) */
 .nav-socials {
@@ -3702,4 +3702,814 @@ img.img-dark-bg {
 @media (max-width: 960px) {
   .cs2-bizcase-split { display: block; }
   .cs2-bizcase-split .cs2-media--flush { margin-top: 28px; max-width: 420px; }
+}
+
+/* Side-by-side legacy screenshots */
+.cs2-img-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.cs2-img-pair figure { margin: 0; }
+
+.cs2-img-pair img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 0.75px solid rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .cs2-img-pair img { border-color: rgba(255, 255, 255, 0.1); }
+
+@media (max-width: 768px) {
+  .cs2-img-pair { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   FIGMA HOMEPAGE — responsive nav (sidebar → top → bottom)
+   ============================================================ */
+
+body.fig-page { background: #fdfdfd; overflow-x: hidden; }
+body.fig-page.dark-mode { background: var(--home-bg); }
+
+.fig-shell {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 960px);
+  gap: 0;
+  justify-content: center;
+  align-items: start;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ── Logo mark ── */
+.fig-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--link-blue);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-bottom: 24px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.fig-logo:hover { background: #1f3fd4; transform: scale(1.05); }
+
+/* ── Nav (desktop: left sidebar) ── */
+.fig-nav {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 80px 12px 24px 0; /* rail starts on the "Fidel Boamah" line */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fig-nav-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.fig-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.fig-rail a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--home-text-muted);
+  transition: color 0.2s ease;
+}
+.fig-rail a svg { width: 18px; height: 18px; flex-shrink: 0; }
+/* Outline icon at rest, solid icon for the selected item */
+.fig-rail a .ic-solid,
+.fig-rail a.active .ic-line { display: none; }
+.fig-rail a.active .ic-solid { display: block; }
+.fig-rail a:hover { color: var(--link-blue); }
+.fig-rail a.active { color: #000000; font-weight: 600; }
+body.dark-mode .fig-rail a.active { color: #ffffff; }
+
+/* About page adopts the home page shell: its sections were centred blocks
+   with their own gutters, so inside the 800px column they align left. */
+body.about-page .about-hero,
+body.about-page .about-section {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+body.about-page .about-hero { padding-top: 0; }
+body.about-page.fig-page { color: var(--home-text); }
+body.about-page .home-footer { max-width: 1230px; padding: 40px 48px; }
+
+/* Horizontal variant of the same menu (About page header).
+   Same icons, pills and selected state — laid out in a row, so the
+   sidebar's left-bleed margin is cancelled. */
+.fig-rail.fig-rail--inline { flex-direction: row; align-items: center; }
+.fig-rail.fig-rail--inline a { margin-left: 0; }
+
+/* Desktop sidebar only: larger nav items styled as pill buttons.
+   The pill bleeds left by its own padding so the labels stay aligned
+   with the avatar above them. */
+@media (min-width: 1081px) {
+  /* Socials sit at the foot of the rail, like a profile chip */
+  .fig-nav-group { flex: 1; width: 100%; }
+  .fig-socials { margin-top: auto; }
+
+  .fig-rail { gap: 4px; }
+  .fig-rail a svg { width: 20px; height: 20px; }
+  .fig-rail a {
+    font-size: 20px;
+    padding: 9px 16px;
+    margin-left: -16px; /* cancels the pill's own padding */
+    gap: 11px;
+    border-radius: 99px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .fig-rail a:hover { background: #f4f4f4; }
+  body.dark-mode .fig-rail a:hover { background: rgba(255, 255, 255, 0.06); }
+}
+
+/* ── Social circular buttons ── */
+.fig-socials { display: flex; gap: 10px; }
+.fig-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--home-border);
+  color: var(--home-text-muted);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.fig-social:hover {
+  background: #f4f4f4;
+  color: var(--home-text);
+  border-color: #dcdcdc;
+}
+.fig-social svg { width: 18px; height: 18px; }
+
+/* ── Main column ── */
+.fig-main {
+  min-width: 0;
+  min-height: 100vh;
+  border-left: 1px solid var(--home-border);
+  border-right: 1px solid var(--home-border);
+}
+
+/* Portrait sits to the right of the intro text on the home page */
+.fig-portrait {
+  width: 202px;
+  height: 202px;
+  flex-shrink: 0;
+  margin: 0 auto; /* centres it in the space left of the column edge */
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.fig-desc {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 0;
+  padding: 60px 40px 64px;
+  border-bottom: 1px solid var(--home-border);
+}
+.fig-desc-text { flex: 1 1 auto; max-width: 620px; min-width: 0; padding-right: 32px; }
+
+/* Non-feed pages: their own blocks need the column's gutter */
+body.about-page .about-hero,
+body.about-page .about-section,
+.cv-intro,
+.cv-section { padding-left: 40px; padding-right: 40px; }
+body.about-page .about-hero { padding-top: 32px; }
+.cv-intro { padding-top: 32px; }
+
+.fig-name {
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -1.1px;
+  line-height: 1.2;
+  color: #0d0d0d;
+  margin-bottom: 12px;
+}
+
+.fig-role { color: #0d0d0d; font-weight: 600; }
+
+.fig-bio {
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.95;
+  letter-spacing: -0.5px;
+  color: #5d5d5d;
+  max-width: none;
+  margin-bottom: 17px;
+  text-wrap: balance;
+}
+.fig-bio--last { margin-bottom: 0; }
+
+/* Home page heading: same typeface/weight as the bio below, just larger */
+body.home-page .fig-name {
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.45;
+}
+
+/* Home page bio: both paragraphs use the About page intro spec */
+body.home-page .fig-bio {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: normal;
+}
+
+/* Org mention: underlined inline link, blue on hover. */
+.fig-org {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+.fig-org:hover { color: var(--link-blue); }
+
+.fig-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+}
+.fig-link:hover { color: var(--link-blue); text-decoration-color: var(--link-blue); }
+body.dark-mode .fig-link { text-decoration-color: rgba(255, 255, 255, 0.4); }
+
+.fig-prev {
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5d5d5d;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0;
+}
+
+/* Klaviyo badge */
+.fig-klaviyo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 14px 0 7px;
+  background: #fcfcfc;
+  border: 1px solid #eeeeee;
+  border-radius: 32px;
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #333333;
+  transition: background 0.2s ease;
+}
+.fig-klaviyo-badge:hover { background: #f5f5f5; }
+.fig-klaviyo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  background: #ef3c23;
+}
+.fig-klaviyo-mark svg { width: 14px; height: 14px; }
+
+/* ── Project cards (borderless) ── */
+.fig-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.fig-card {
+  position: relative;
+  display: block;
+  border: none;
+  background: transparent;
+  padding: 44px 40px 52px;
+  transition: background 0.2s ease;
+}
+/* "Let's talk" block closing the feed — matches the About page's version */
+.fig-contact {
+  padding: 44px 40px 64px;
+}
+.fig-contact h2 {
+  font-size: 24px;
+  line-height: 1.6;
+  font-weight: 700;
+  letter-spacing: normal;
+  color: var(--home-text);
+  margin: 0 0 12px;
+}
+.fig-contact p {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 620px;
+}
+
+.fig-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--home-border);
+}
+.fig-card:last-child::after { content: none; }
+a.fig-card:hover { background: rgba(0, 0, 0, 0.025); }
+body.dark-mode a.fig-card:hover { background: rgba(255, 255, 255, 0.04); }
+a.fig-card:hover .fig-card-title { color: var(--link-blue); }
+
+.fig-card-tint {
+  aspect-ratio: 1.45;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.fig-card-tint img,
+.fig-card-tint video {
+  width: calc(100% - 88px);
+  display: block;
+  border-radius: 8px;
+}
+/* TruckBux: smaller centered artwork with breathing room */
+.fig-card-tint--truck img {
+  width: auto;
+  max-height: 62%;
+  border-radius: 0;
+}
+
+.fig-card-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 0 26px;
+  background: transparent;
+}
+
+.fig-card-text { min-width: 0; }
+
+.fig-card-read {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 20px;
+  border: 1px solid var(--home-border);
+  border-radius: 99px;
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5d5d5d;
+  background: transparent;
+  flex-shrink: 0;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+a.fig-card:hover .fig-card-read {
+  background: var(--link-blue);
+  border-color: var(--link-blue);
+  color: #ffffff;
+}
+body.dark-mode .fig-card-read { color: #cfcfcf; }
+
+/* NDA marker on the cards with no write-up — same pill, no hover state */
+.fig-card-nda {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 36px;
+  padding: 0 18px;
+  border: 1px solid var(--home-border);
+  border-radius: 99px;
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5d5d5d;
+  flex-shrink: 0;
+}
+.fig-card-nda svg { width: 14px; height: 14px; flex-shrink: 0; }
+body.dark-mode .fig-card-nda { color: #cfcfcf; }
+.fig-card-meta {
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5d5d5d;
+  margin: 0 0 12px;
+}
+.fig-card-summary {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: normal;
+  color: #5d5d5d;
+  margin: 16px 0 0;
+  max-width: 62ch;
+}
+body.dark-mode .fig-card-summary { color: rgba(255, 255, 255, 0.7); }
+
+.fig-card-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.1px;
+  line-height: 1.15;
+  color: #0d0d0d;
+  margin: 0;
+  transition: color 0.25s ease;
+}
+
+/* ── Dark mode ── */
+body.dark-mode .fig-bio,
+body.dark-mode .fig-prev { color: rgba(255, 255, 255, 0.78); }
+body.dark-mode .fig-social { border-color: #333; color: #cfcfcf; }
+body.dark-mode .fig-social:hover { background: rgba(255, 255, 255, 0.06); color: #fff; border-color: #444; }
+body.dark-mode .fig-card-meta { color: #a0a0a0; }
+body.dark-mode .fig-card-title { color: #f5f5f5; }
+body.dark-mode .fig-klaviyo-badge { background: #1f1f1f; border-color: #333; color: #e5e5e5; }
+
+/* ============================================================
+   TABLET (≤1080px): horizontal top nav, single column
+   ============================================================ */
+@media (max-width: 1080px) {
+  .fig-shell {
+    display: block;
+    max-width: 860px;
+    padding: 0 40px 110px;
+  }
+  .fig-nav {
+    position: sticky;
+    top: 0;
+    z-index: 400;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    padding: 22px calc(50vw - 50%) 20px;
+    margin: 0 calc(50% - 50vw) 64px;
+    background: var(--home-bg);
+    border-bottom: 1px solid var(--home-border);
+  }
+  .fig-logo { width: 40px; height: 40px; margin-bottom: 0; }
+  .fig-nav-group { flex-direction: row; align-items: center; gap: 44px; }
+  .fig-rail { flex-direction: row; gap: 40px; }
+  .fig-rail a .ic-line,
+  .fig-rail a.active .ic-solid { display: none; }
+  .fig-socials { gap: 10px; }
+  .fig-main { min-height: 0; border-left: none; border-right: none; }
+  .fig-desc {
+    margin: 0 calc(50% - 50vw) 64px;
+    padding: 0 calc(50vw - 50%) 40px;
+  }
+  .fig-cards { gap: 48px; }
+  /* Full-bleed so the hover tint fills the screen; the padding keeps the
+     content on the same line it sits on everywhere else. */
+  .fig-card {
+    margin: 0 calc(50% - 50vw);
+    padding: 0 calc(50vw - 50%) 40px;
+  }
+  .fig-contact { padding: 40px 0 0; }
+  .fig-bio { max-width: none; }
+}
+
+/* ============================================================
+   MOBILE (≤640px): nav anchored at bottom
+   ============================================================ */
+@media (max-width: 640px) {
+  .fig-shell { padding: 44px 22px 104px; }
+
+  .fig-logo { display: none; }
+
+  .fig-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    z-index: 600;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 12px 20px calc(12px + env(safe-area-inset-bottom, 0px));
+    background: rgba(255, 255, 255, 0.92);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border-top: 1px solid var(--home-border);
+    border-bottom: none;
+  }
+  .fig-nav-group { flex-direction: row; align-items: center; gap: 22px; }
+  .fig-rail { gap: 48px; }
+  .fig-socials { display: none; }
+
+  /* Too narrow for a row: portrait goes back above the text */
+  .fig-desc { margin-bottom: 100px; flex-direction: column; align-items: flex-start; gap: 0; }
+  .fig-desc-text { max-width: none; padding-right: 0; }
+  .fig-portrait { order: -1; width: 141px; height: 141px; margin: 0 0 24px; }
+
+  /* Stacked single column, so each block needs more air around it */
+  .fig-cards { gap: 100px; }
+
+  /* Read / NDA pill drops below the artwork and spans the column.
+     `display: contents` lets the pill escape .fig-card-info so it can be
+     ordered after the image without changing the markup. */
+  .fig-card { display: flex; flex-direction: column; }
+  .fig-card-info { display: contents; }
+  .fig-card-text { order: 1; margin-bottom: 20px; }
+  .fig-card-tint { order: 2; }
+  .fig-card-read,
+  .fig-card-nda {
+    order: 3;
+    width: 100%;
+    height: 46px;
+    margin-top: 16px;
+    justify-content: center;
+  }
+  .fig-contact { padding: 100px 0 0; }
+  .fig-card-tint img,
+  .fig-card-tint video { width: calc(100% - 44px); }
+  .fig-card-tint--truck img { width: auto; }
+
+  body.dark-mode .fig-nav {
+    background: rgba(18, 18, 18, 0.9);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* ============================================================
+   CASE STUDY — TABLE OF CONTENTS (fixed left, scroll-spy)
+   ============================================================ */
+.cs-toc {
+  position: fixed;
+  left: 48px; /* same edge as the "Back to work" link above */
+  top: 132px;
+  z-index: 100;
+  padding: 0 12px 0 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* The rail no longer folds into dots, so the marker is retired */
+.cs-toc-dots { display: none; }
+
+.cs-toc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cs-toc-link {
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+  font-weight: 400;
+  letter-spacing: -0.1px;
+  color: #9b9b9b;
+  transition: color 0.2s ease;
+}
+.cs-toc-link:hover { color: var(--link-blue); }
+.cs-toc-link.active { color: var(--text-primary); font-weight: 500; }
+
+body.dark-mode .cs-toc-link { color: #7a7a7a; }
+body.dark-mode .cs-toc-link.active { color: #f5f5f5; }
+
+/* Below this the left rail can't clear the content column at all, so the
+   back link moves above the hero instead of sitting beside it. */
+@media (max-width: 1299px) {
+  .cs-toc { display: none; }
+}
+
+@media (min-width: 961px) and (max-width: 1299px) {
+  .cs-back-btn {
+    position: absolute;
+    top: 36px;
+    left: max(48px, calc(50vw - 502px)); /* lines up with the hero text */
+  }
+  .cs2-hero { padding-top: 104px; }
+}
+
+/* Here the hero's own gutter drops to 24px, so the link follows it */
+@media (min-width: 769px) and (max-width: 960px) {
+  .cs-back-btn { position: absolute; top: 30px; left: 24px; }
+  .cs2-hero { padding-top: 92px; }
+}
+
+/* Case study shares the home page's centred 1060px envelope: a 240px rail
+   column plus an 820px content column, so both pages' rails line up. */
+@media (min-width: 1300px) {
+  body.cs-page main {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding-left: 150px;
+    box-sizing: border-box;
+  }
+  body.cs-page .cs-back-btn,
+  body.cs-page .cs-toc { left: calc(50vw - 555px); }
+}
+
+/* ============================================================
+   CV PAGE
+   ============================================================ */
+.cv-intro .fig-name { margin-bottom: 12px; }
+.cv-intro .fig-bio { margin-bottom: 24px; }
+
+.cv-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 45px;
+  padding: 0 20px;
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3f3f3f;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.cv-download svg { width: 16px; height: 16px; }
+.cv-download:hover { color: var(--link-blue); border-color: var(--link-blue); }
+
+.cv-section { margin-top: 54px; }
+
+.cv-hdr {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.1px;
+  color: #0d0d0d;
+  margin-bottom: 26px;
+}
+
+.cv-row {
+  display: grid;
+  grid-template-columns: 230px 250px 1fr;
+  align-items: center;
+  padding: 10px 0;
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  color: #3f3f3f;
+  white-space: nowrap;
+}
+
+.cv-cell { min-width: 0; }
+.cv-val { color: #3f3f3f; transition: color 0.2s ease; }
+.cv-val:hover { color: var(--link-blue); }
+
+.cv-org {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 400;
+}
+
+.cv-dates {
+  color: #807e7e;
+  justify-self: start;
+}
+
+.cv-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+}
+.cv-icon--hire { background: #111111; color: #fdfdfd; }
+.cv-icon--klaviyo { background: #ef3c23; }
+.cv-icon--klaviyo svg { width: 14px; height: 14px; }
+.cv-icon--edu { background: #ededed; color: #3f3f3f; }
+
+body.dark-mode .cv-download { background: #1f1f1f; border-color: #333; color: #e5e5e5; }
+body.dark-mode .cv-hdr { color: #f5f5f5; }
+body.dark-mode .cv-row { color: #cfcfcf; }
+body.dark-mode .cv-val { color: #cfcfcf; }
+body.dark-mode .cv-dates { color: #8a8a8a; }
+body.dark-mode .cv-icon--hire { background: #f5f5f5; color: #111; }
+body.dark-mode .cv-icon--edu { background: #2a2a2a; color: #cfcfcf; }
+
+@media (max-width: 640px) {
+  .cv-row { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; border-bottom: 1px solid var(--home-border); }
+  .cv-row:last-child { border-bottom: none; }
+  .cv-dates { justify-self: start; }
+}
+
+/* ============================================================
+   TEXT-LINK HOVER — avatar blue (site-wide)
+   ============================================================ */
+.fig-prev a:hover,
+.fig-klaviyo-badge:hover,
+.home-nav a:hover,
+.view-all-link:hover,
+.footer-links a:hover,
+.footer-credits a:hover,
+.cs-nav-pill a:not(.active):hover,
+.cs-section a:not(.cs-cta):hover,
+.about-intro p a:hover,
+.footer-copy a:hover {
+  color: var(--link-blue);
+}
+.cs-section a:not(.cs-cta):hover { text-decoration-color: var(--link-blue); }
+.view-all-link:hover { opacity: 1; }
+.fig-klaviyo-badge:hover .fig-klaviyo-mark { background: var(--link-blue); }
+
+/* ============================================================
+   FIRST-LOAD PRELOADER — name with avatar between
+   ============================================================ */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0C32DA;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.preloader.is-done {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preloader-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(12px, 1.6vw, 22px);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(19px, 3.5vw, 40px);
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.preloader-name .pre-avatar {
+  width: clamp(43px, 6.6vw, 77px);
+  height: auto;
+  opacity: 0;
+  transform: scale(0.4) rotate(-18deg);
+  animation: pre-avatar-in 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.16s forwards;
+}
+
+@keyframes pre-avatar-in {
+  to { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+/* Hide page body until the preloader hands off (avoids flash) */
+body.fig-page.preloading .fig-shell { opacity: 0; }
+body.fig-page .fig-shell { transition: opacity 0.5s ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  .preloader-name .pre-avatar { animation: none; opacity: 1; transform: none; }
+  .preloader { transition: none; }
 }

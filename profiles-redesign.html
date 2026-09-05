@@ -8,9 +8,9 @@
 </head>
 <body class="case-study cs-page">
 
-  <a href="index.html" class="cs-back-btn" aria-label="Back to home">
-    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Home
+  <a href="index.html" class="cs-back-btn" aria-label="Back to work">
+    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 8H3.5M3.5 8l4-4M3.5 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to work
   </a>
 
   <main>
@@ -18,14 +18,15 @@
     <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
     <section class="cs2-hero">
       <div class="cs2-hero-labels reveal">
-        <span>Product Design</span>
-        <span>·</span>
-        <span>B2B SaaS</span>
-        <span>·</span>
-        <span>2023</span>
+        <span>Klaviyo</span>
       </div>
       <h1 class="reveal reveal-d1">Profiles Redesign</h1>
       <p class="cs2-hero-sub reveal reveal-d2">Modernizing a decade-old core product to align with how marketers actually troubleshoot — and making the business case to do it right.</p>
+      <div class="cs2-hero-stats reveal reveal-d2">
+        <span data-trend="down"><svg class="cs2-trend" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v9.5"/><path d="M11.6 8.9 8 12.5 4.4 8.9"/></svg><strong>31%</strong> faster time-on-task</span>
+        <span data-trend="down"><svg class="cs2-trend" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v9.5"/><path d="M11.6 8.9 8 12.5 4.4 8.9"/></svg><strong>23%</strong> fewer support tickets</span>
+        <span data-trend="up"><svg class="cs2-trend" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 13V3.5"/><path d="M4.4 7.1 8 3.5l3.6 3.6"/></svg><strong>$10&ndash;15M</strong> savings identified</span>
+      </div>
       <div class="cs2-hero-media reveal reveal-d3">
         <img src="assets/Homepage/profiles-redesign.png" alt="Profiles Redesign dashboard" />
       </div>
@@ -56,30 +57,6 @@
       <span class="cs2-eyebrow reveal">Long Story Short</span>
       <p class="cs2-lead reveal reveal-d1">I led the end-to-end redesign of Klaviyo's most legacy product area — influencing a pivot from a 1:1 code migration to a full experience overhaul that cut time-on-task by 31% and support tickets by 23%.</p>
 
-      <div class="cs2-accomplishments">
-        <div class="cs2-accomplishment reveal">
-          <span class="cs2-emoji">🎨</span>
-          <div>
-            <h4>Design</h4>
-            <p>Owned end-to-end UX from vision sprint through production — introducing new components and patterns to the design system.</p>
-          </div>
-        </div>
-        <div class="cs2-accomplishment reveal reveal-d1">
-          <span class="cs2-emoji">📊</span>
-          <div>
-            <h4>Business Case</h4>
-            <p>Partnered with analysts to quantify $10–15M in operational savings, making the financial case to expand scope from migration to full redesign.</p>
-          </div>
-        </div>
-        <div class="cs2-accomplishment reveal reveal-d2">
-          <span class="cs2-emoji">🚀</span>
-          <div>
-            <h4>Impact</h4>
-            <p>Shipped to 150K+ users — reducing time-on-task by 31% and Profiles support tickets by 23% within six months of launch.</p>
-          </div>
-        </div>
-      </div>
-
       <div class="cs2-hmw reveal">
         <span class="cs2-hmw-icon">💭</span>
         <p>How might we modernize a decade-old product without disrupting 150K+ existing users — while making it dramatically easier to troubleshoot customer data?</p>
@@ -88,11 +65,13 @@
 
     <!-- ═══════════════════════════ THE PROBLEM ═══════════════════════════ -->
     <section class="cs2-section">
-      <span class="cs2-eyebrow reveal">The Problem</span>
-      <h2 class="reveal reveal-d1">Engineering initiated a technical migration from Backbone.js to React</h2>
-      <div class="cs2-two-col reveal reveal-d2">
-        <p>In January 2023, engineering kicked off a mandate to migrate Klaviyo's oldest frontend code from Backbone.js to React ahead of the company's IPO compliance push. The initial scope was a strict 1:1 conversion — rebuild what exists, exactly as it exists, just in new code.</p>
-        <div class="cs2-diagram-box" role="img" aria-label="Technical migration from Backbone.js to React">
+      <div class="cs2-split">
+        <div class="cs2-split-text">
+          <span class="cs2-eyebrow reveal">The Problem</span>
+          <h2 class="reveal reveal-d1">Imagine a product area that hadn't evolved since 2012</h2>
+          <p class="cs2-body reveal reveal-d2">In January 2023, engineering kicked off a strict 1:1 migration of Klaviyo's oldest frontend code from Backbone.js to React — rebuild what exists, exactly as it exists. But Profiles, the repository for every piece of customer data Klaviyo holds, hadn't meaningfully changed in a decade: broken navigation, deprecated patterns, and workflows that no longer matched how marketers worked.</p>
+        </div>
+        <div class="cs2-diagram-box reveal reveal-d3" role="img" aria-label="Technical migration from Backbone.js to React">
           <div class="cs2-diagram-title">Technical Migration</div>
           <div class="cs2-diagram-row">
             <div class="cs2-diagram-item">
@@ -114,33 +93,43 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="cs2-section">
-      <span class="cs2-eyebrow reveal">The Problem</span>
-      <h2 class="reveal reveal-d1">Imagine a product area that hadn't evolved since 2012</h2>
-      <p class="reveal reveal-d2">Profiles is the centralized repository for every piece of customer data Klaviyo holds — but the experience hadn't meaningfully changed since 2012. It was riddled with broken navigation paths, deprecated UI patterns, and workflows that no longer matched how marketers actually used the product.</p>
-      <div class="cs2-insight reveal reveal-d3">
+      <div class="cs2-insight reveal">
         <p>A straight 1:1 rebuild would have locked in over a decade of accumulated debt for years to come. <strong>I saw a narrow window to make the case for doing it right.</strong></p>
       </div>
     </section>
 
-    <!-- ══════════════════════ EXISTING SOLUTION ══════════════════════ -->
+    <!-- ══════════════════════ THE BEFORE ══════════════════════ -->
     <section class="cs2-section">
-      <span class="cs2-eyebrow reveal">The Existing Solution</span>
-      <h2 class="reveal reveal-d1">Profiles Homepage</h2>
-      <p class="reveal reveal-d2">The existing Profiles homepage created billing confusion — it was unclear whether counts referred to email or SMS profiles — and lacked any meaningful search functionality.</p>
-      <div class="cs2-media reveal reveal-d3">
-        <img src="assets/Profiles redesign/old home page.png" alt="The legacy Profiles homepage" style="aspect-ratio: 3526/2034;" />
+      <span class="cs2-eyebrow reveal">The Before</span>
+      <h2 class="reveal reveal-d1">Two pages, a decade of debt</h2>
+      <p class="reveal reveal-d2">The legacy experience failed marketers at both ends of their workflow — finding a record, and understanding it once they got there:</p>
+      <div class="cs2-fail-grid">
+        <div class="cs2-fail reveal">
+          <h4>Billing confusion</h4>
+          <p>Counts didn't say whether they meant email or SMS profiles — the #1 ticket source in this area.</p>
+        </div>
+        <div class="cs2-fail reveal reveal-d1">
+          <h4>No real search</h4>
+          <p>Finding a single record took 7 clicks through nested menus.</p>
+        </div>
+        <div class="cs2-fail reveal reveal-d2">
+          <h4>Buried data</h4>
+          <p>Roughly 50% of troubleshooting data sat below the fold.</p>
+        </div>
+        <div class="cs2-fail reveal reveal-d3">
+          <h4>Hidden consent</h4>
+          <p>The single most-checked status required excessive scrolling to reach.</p>
+        </div>
       </div>
-    </section>
-
-    <section class="cs2-section">
-      <span class="cs2-eyebrow reveal">The Existing Solution</span>
-      <h2 class="reveal reveal-d1">Customer Profile Page</h2>
-      <p class="reveal reveal-d2">The individual customer profile page suffered from information overload — roughly 50% of the data marketers needed for troubleshooting was buried below the fold, requiring excessive scrolling just to reach consent status.</p>
-      <div class="cs2-media reveal reveal-d3">
-        <img src="assets/Profiles redesign/old customer page.png" alt="The legacy individual customer profile page" style="aspect-ratio: 3526/2034;" />
+      <div class="cs2-img-pair reveal">
+        <figure>
+          <img src="assets/Profiles redesign/old home page.png" alt="The legacy Profiles homepage" style="aspect-ratio: 3526/2034;" />
+          <figcaption class="cs2-media-caption">The legacy Profiles homepage</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/Profiles redesign/old customer page.png" alt="The legacy individual customer profile page" style="aspect-ratio: 3526/2034;" />
+          <figcaption class="cs2-media-caption">The legacy customer profile page</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -150,99 +139,98 @@
       <h2 class="reveal reveal-d1">I led a 3-week vision sprint, developing data-driven ideas aligned with marketers' goals</h2>
       <p class="reveal reveal-d2">Rather than react to an engineering constraint, I reframed the migration as an opportunity — running a focused sprint to define who uses Profiles, why they use it, and what friction was costing us.</p>
 
-      <div class="cs2-strategies">
-        <div class="cs2-strategy reveal">
-          <div class="cs2-strategy-icon">🧑🏿‍💻</div>
-          <div>
-            <h4>User Archetype: The Troubleshooter</h4>
-            <p>Someone who enters a customer profile to resolve issues, verify data accuracy, or confirm the status of a record. Speed and clarity are everything — not breadth of features.</p>
-          </div>
+      <div class="cs2-strategy-cards">
+        <div class="cs2-strategy-card reveal">
+          <h4><span class="n">01</span> The Troubleshooter</h4>
+          <p>The core archetype: someone entering a profile to resolve an issue, verify data, or confirm a record's status. Speed and clarity beat breadth of features.</p>
         </div>
-        <div class="cs2-strategy reveal reveal-d1">
-          <div class="cs2-strategy-icon">🔍</div>
-          <div>
-            <h4>Search First</h4>
-            <p>Marketers need workflows that help them quickly access key profile data without digging through nested menus. Finding a record should take seconds, not clicks.</p>
-          </div>
+        <div class="cs2-strategy-card reveal reveal-d1">
+          <h4><span class="n">02</span> Search first</h4>
+          <p>Finding a record should take seconds, not clicks. Key profile data should never hide behind nested menus.</p>
         </div>
-        <div class="cs2-strategy reveal reveal-d2">
-          <div class="cs2-strategy-icon">💭</div>
-          <div>
-            <h4>Understand at a Glance</h4>
-            <p>Marketers need a clear picture of a customer's relationship to the business the moment they land on a profile — consent, contact, and subscription status up front.</p>
-          </div>
+        <div class="cs2-strategy-card reveal reveal-d2">
+          <h4><span class="n">03</span> Glanceable status</h4>
+          <p>Consent, contact, and subscription status up front — a clear picture of the customer relationship the moment a profile loads.</p>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════ BUSINESS CASE ══════════════════════ -->
+    <!-- ══════════════════════ THE PIVOT (CENTERPIECE) ══════════════════════ -->
     <section class="cs2-section">
       <div class="cs2-bizcase-split">
         <div class="cs2-bizcase-text">
-          <span class="cs2-eyebrow reveal">The Business Case</span>
-          <h2 class="reveal reveal-d1">Quantifying the cost of friction</h2>
-          <p class="cs2-body reveal reveal-d2">I partnered with business analysts to translate design friction into hard numbers leadership could act on — calculating the operational drag created by the existing Profiles experience.</p>
+          <span class="cs2-eyebrow reveal">The Pivot</span>
+          <h2 class="reveal reveal-d1">From code migration to redesign</h2>
+          <p class="cs2-body reveal reveal-d2">Rather than accept the engineering constraint, I partnered with business analysts to translate design friction into hard numbers leadership could act on — calculating the operational drag created by the existing Profiles experience.</p>
         </div>
         <div class="cs2-media cs2-media--flush reveal reveal-d3">
           <img class="img-dark-bg" src="assets/Profiles redesign/estimated costs.png" alt="Estimated cost of support friction: $10–15M in operational savings" />
         </div>
       </div>
-    </section>
 
-    <!-- ══════════════════════ PIVOT ══════════════════════ -->
-    <section class="cs2-section">
-      <span class="cs2-eyebrow reveal">The Pivot</span>
-      <h2 class="reveal reveal-d1">From migration to redesign</h2>
-      <p class="reveal reveal-d2">Using the cost-of-support-tickets calculation, I made the case to leadership that a 20% reduction in tickets would pay for the redesign work within six months — shifting the project's scope from a pure 1:1 migration to a full redesign.</p>
-      <div class="cs2-insight reveal reveal-d3">
-        <p>Leadership approved the expanded scope. <strong>What started as a code migration became the most significant investment in Profiles in over a decade.</strong></p>
+      <div class="cs2-hmw cs2-hmw--purple reveal">
+        <p>A 20% reduction in support tickets would pay for the entire redesign within six months.</p>
       </div>
+
+      <p class="reveal">Leadership approved the expanded scope. What started as a code migration became the most significant investment in Profiles in over a decade.</p>
     </section>
 
-    <!-- ══════════════════════ DEFINING FEATURES ══════════════════════ -->
+    <!-- ══════════════════════ KEY DESIGN DECISIONS ══════════════════════ -->
     <section class="cs2-section">
-      <span class="cs2-eyebrow reveal">Final Designs</span>
-      <h2 class="reveal reveal-d1">Redesigned Profiles experience</h2>
-      <p class="reveal reveal-d2">We prioritized the search experience and restructured the information hierarchy to surface the data marketers needed most — elevating consent status and contact details to the top of every page.</p>
+      <span class="cs2-eyebrow reveal">Key Design Decisions</span>
+      <h2 class="reveal reveal-d1">Three decisions aligned the product with how marketers troubleshoot</h2>
 
       <div class="cs2-features">
 
         <div class="cs2-feature">
-          <span class="cs2-feature-eyebrow reveal">Feature 01</span>
-          <h3 class="reveal reveal-d1">Profile count redesign</h3>
-          <p class="reveal reveal-d2">Addressed billing confusion with a clear card layout and contextual tooltips explaining what each count represents — eliminating the #1 source of support tickets in this area.</p>
-          <div class="cs2-media reveal reveal-d3">
-            <video autoplay loop muted playsinline aria-label="Redesigned profile counts with contextual tooltips" style="aspect-ratio: 1108/720;"><source src="assets/Profiles redesign/profilecounts.mp4" type="video/mp4" /></video>
+          <div class="cs2-decision-split">
+            <div class="cs2-decision-text">
+              <span class="cs2-feature-eyebrow reveal">Decision 01</span>
+              <h3 class="reveal reveal-d1">Information architecture before layouts</h3>
+              <p class="reveal reveal-d2">We locked the IA before designing a single screen — elevating consent status in the hierarchy so the most-checked data point is immediately visible to anyone troubleshooting a profile.</p>
+            </div>
+            <div class="cs2-media cs2-media--flush reveal reveal-d3">
+              <img class="img-dark-bg" src="assets/Profiles redesign/information architecture.png" alt="Information architecture for the redesigned profile page" style="aspect-ratio: 1780/910;" />
+            </div>
           </div>
         </div>
 
         <div class="cs2-feature">
-          <span class="cs2-feature-eyebrow reveal">Feature 02</span>
-          <h3 class="reveal reveal-d1">Data table redesign</h3>
-          <p class="reveal reveal-d2">Added search and column filtering to the profiles table, reducing the steps to find a record from 7 clicks to 3. Marketers can now filter by any property without leaving the page.</p>
-          <div class="cs2-media reveal reveal-d3">
-            <video autoplay loop muted playsinline aria-label="Redesigned profiles data table with search and column filtering" style="aspect-ratio: 1108/720;"><source src="assets/Profiles redesign/Data table.mp4" type="video/mp4" /></video>
+          <div class="cs2-decision-split">
+            <div class="cs2-decision-text">
+              <span class="cs2-feature-eyebrow reveal">Decision 02</span>
+              <h3 class="reveal reveal-d1">Search first, everywhere</h3>
+              <p class="reveal reveal-d2">Search and column filtering in the profiles table cut the steps to find a record from 7 clicks to 3 — marketers filter by any property without leaving the page.</p>
+            </div>
+            <div class="cs2-media cs2-media--flush reveal reveal-d3">
+              <video autoplay loop muted playsinline aria-label="Redesigned profiles data table with search and column filtering" style="aspect-ratio: 1108/720;"><source src="assets/Profiles redesign/Data table.mp4" type="video/mp4" /></video>
+            </div>
           </div>
         </div>
 
         <div class="cs2-feature">
-          <span class="cs2-feature-eyebrow reveal">Feature 03</span>
-          <h3 class="reveal reveal-d1">Information architecture</h3>
-          <p class="reveal reveal-d2">We locked the information architecture before designing layouts — elevating consent status in the hierarchy so it's immediately visible to anyone troubleshooting a profile.</p>
-          <div class="cs2-media reveal reveal-d3">
-            <img class="img-dark-bg" src="assets/Profiles redesign/information architecture.png" alt="Information architecture for the redesigned profile page" style="aspect-ratio: 1780/910;" />
+          <div class="cs2-decision-split">
+            <div class="cs2-decision-text">
+              <span class="cs2-feature-eyebrow reveal">Decision 03</span>
+              <h3 class="reveal reveal-d1">Clarity where money is involved</h3>
+              <p class="reveal reveal-d2">Profile counts drove billing confusion — the #1 ticket source in the area. A clear card layout with contextual tooltips explains exactly what each count represents.</p>
+            </div>
+            <div class="cs2-media cs2-media--flush reveal reveal-d3">
+              <video autoplay loop muted playsinline aria-label="Redesigned profile counts with contextual tooltips" style="aspect-ratio: 1108/720;"><source src="assets/Profiles redesign/profilecounts.mp4" type="video/mp4" /></video>
+            </div>
           </div>
         </div>
 
-        <div class="cs2-feature">
-          <span class="cs2-feature-eyebrow reveal">Feature 04</span>
-          <h3 class="reveal reveal-d1">Troubleshooting flow for consent</h3>
-          <p class="reveal reveal-d2">A streamlined flow lets marketers quickly verify a customer's consent status and history without leaving the profile page — turning a multi-tab workflow into a single, focused panel.</p>
-          <div class="cs2-media reveal reveal-d3">
-            <video autoplay loop muted playsinline aria-label="Troubleshooting flow for verifying consent status" style="aspect-ratio: 1108/720;"><source src="assets/Profiles redesign/Individual profile page.mp4" type="video/mp4" /></video>
-          </div>
-        </div>
+      </div>
+    </section>
 
+    <!-- ══════════════════════ FINAL EXPERIENCE ══════════════════════ -->
+    <section class="cs2-section">
+      <span class="cs2-eyebrow reveal">The Final Experience</span>
+      <h2 class="reveal reveal-d1">Troubleshooting in one place</h2>
+      <p class="reveal reveal-d2">The payoff: marketers verify a customer's consent status and history without ever leaving the profile page — a multi-tab workflow collapsed into a single, focused panel.</p>
+      <div class="cs2-media reveal reveal-d3">
+        <video autoplay loop muted playsinline aria-label="Troubleshooting flow for verifying consent status" style="aspect-ratio: 1108/720;"><source src="assets/Profiles redesign/Individual profile page.mp4" type="video/mp4" /></video>
       </div>
     </section>
 
@@ -255,18 +243,23 @@
         <div class="cs2-stat">
           <div class="cs2-stat-num">31%</div>
           <div class="cs2-stat-label">Reduction in time-on-task</div>
+          <div class="cs2-stat-cause">Search-first navigation and consent elevated to the top of every page</div>
         </div>
         <div class="cs2-stat">
           <div class="cs2-stat-num">23%</div>
           <div class="cs2-stat-label">Drop in Profiles support tickets</div>
+          <div class="cs2-stat-cause">Billing clarity eliminated the area's #1 ticket source</div>
         </div>
         <div class="cs2-stat">
           <div class="cs2-stat-num">$10–15M</div>
           <div class="cs2-stat-label">In identified operational savings</div>
+          <div class="cs2-stat-cause">The business case that turned a migration into a redesign</div>
         </div>
       </div>
 
-      <p class="reveal">The redesign shipped to 150K+ users and paid for itself within the projected six-month window. New components and patterns introduced during this project were adopted into the Klaviyo design system and used in subsequent product areas.</p>
+      <div class="cs2-insight reveal">
+        <p><strong>Reflection:</strong> The redesign shipped to 150K+ users and paid for itself within the projected six-month window, with its components adopted into the Klaviyo design system. It taught me that modernizing a decade-old product is as much about preserving muscle memory as improving it — and that the fastest way to change a project's scope is to speak in the numbers leadership already cares about.</p>
+      </div>
     </section>
 
     <!-- ══════════════════════ NEXT UP ══════════════════════ -->

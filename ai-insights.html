@@ -8,28 +8,40 @@
 </head>
 <body class="case-study cs-page">
 
-  <a href="index.html" class="cs-back-btn" aria-label="Back to home">
-    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Home
+  <a href="index.html" class="cs-back-btn" aria-label="Back to work">
+    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 8H3.5M3.5 8l4-4M3.5 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to work
   </a>
 
   <main>
 
+    <!-- ═════════════════ TABLE OF CONTENTS (fixed left) ═════════════════ -->
+    <nav class="cs-toc" aria-label="Table of contents">
+      <div class="cs-toc-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="cs-toc-list">
+      <a href="#tldr" class="cs-toc-link">Tl;dr</a>
+      <a href="#problem" class="cs-toc-link">Problem</a>
+      <a href="#before" class="cs-toc-link">The before</a>
+      <a href="#research" class="cs-toc-link">Research</a>
+      <a href="#strategy" class="cs-toc-link">Strategy</a>
+      <a href="#aha" class="cs-toc-link">Aha moment</a>
+      <a href="#decisions" class="cs-toc-link">Design decisions</a>
+      <a href="#final" class="cs-toc-link">Final experience</a>
+      <a href="#impact" class="cs-toc-link">Impact</a>
+      </div>
+    </nav>
+
     <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
     <section class="cs2-hero">
       <div class="cs2-hero-labels reveal">
-        <span>Product Design</span>
-        <span>·</span>
-        <span>B2B SaaS</span>
-        <span>·</span>
-        <span>2025</span>
+        <span>Klaviyo</span>
       </div>
       <h1 class="reveal reveal-d1">AI Insights</h1>
       <p class="cs2-hero-sub reveal reveal-d2">Turning Klaviyo's customer data into AI-powered revenue recommendations — helping marketers move from analysis to action.</p>
       <div class="cs2-hero-stats reveal reveal-d2">
-        <span><strong>25%</strong> lift in attributed value</span>
-        <span><strong>14%</strong> boost in engagement</span>
-        <span><strong>+6 NPS</strong> from data trust</span>
+        <span data-trend="up"><svg class="cs2-trend" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 13V3.5"/><path d="M4.4 7.1 8 3.5l3.6 3.6"/></svg><strong>25%</strong> lift in attributed value</span>
+        <span data-trend="up"><svg class="cs2-trend" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 13V3.5"/><path d="M4.4 7.1 8 3.5l3.6 3.6"/></svg><strong>14%</strong> boost in engagement</span>
+        <span data-trend="up"><svg class="cs2-trend" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 13V3.5"/><path d="M4.4 7.1 8 3.5l3.6 3.6"/></svg><strong>+6 NPS</strong> from data trust</span>
       </div>
       <div class="cs2-hero-media reveal reveal-d3">
         <img src="assets/Homepage/AI-insights.png" alt="AI Insights dashboard" />
@@ -57,7 +69,7 @@
     </div>
 
     <!-- ══════════════════════════ LONG STORY SHORT ══════════════════════════ -->
-    <section class="cs2-section">
+    <section class="cs2-section" id="tldr">
       <span class="cs2-eyebrow reveal">Long Story Short</span>
       <p class="cs2-lead reveal reveal-d1">I reframed AI recommendations around revenue opportunity, helping marketers move from analysis to action faster — and established the design framework Klaviyo now uses for agentic intelligence.</p>
 
@@ -68,7 +80,7 @@
     </section>
 
     <!-- ═══════════════════════════ THE PROBLEM ═══════════════════════════ -->
-    <section class="cs2-section">
+    <section class="cs2-section" id="problem">
       <div class="cs2-split">
         <div class="cs2-split-text">
           <span class="cs2-eyebrow reveal">The Problem</span>
@@ -92,7 +104,7 @@
     </section>
 
     <!-- ══════════════════════ THE EXISTING SOLUTION ══════════════════════ -->
-    <section class="cs2-section">
+    <section class="cs2-section" id="before">
       <div class="cs2-before-split">
         <div class="cs2-before-text">
           <span class="cs2-eyebrow reveal">The Before</span>
@@ -124,7 +136,7 @@
     </section>
 
     <!-- ══════════════════════ SPEAKING TO USERS ══════════════════════ -->
-    <section class="cs2-section">
+    <section class="cs2-section" id="research">
       <span class="cs2-eyebrow reveal">Speaking To Users</span>
       <h2 class="reveal reveal-d1">I went out and interviewed 18 marketers across 9 different industries</h2>
       <p class="reveal reveal-d2">Beauty brands, apparel shops, food &amp; beverage companies, and so many more &mdash; getting a range of perspectives was important because it led us to three main issues with turning data into action:</p>
@@ -152,7 +164,7 @@
     </section>
 
     <!-- ══════════════════════ DESIGN STRATEGY ══════════════════════ -->
-    <section class="cs2-section">
+    <section class="cs2-section" id="strategy">
       <span class="cs2-eyebrow reveal">Design Strategy &amp; Priorities</span>
       <h2 class="reveal reveal-d1">I pitched 3 strategies to move from a passive data repository to an active growth engine.</h2>
 
@@ -173,7 +185,7 @@
     </section>
 
     <!-- ══════════════════════ THE AHA MOMENT ══════════════════════ -->
-    <section class="cs2-section">
+    <section class="cs2-section" id="aha">
       <span class="cs2-eyebrow reveal">The Aha Moment</span>
       <h2 class="reveal reveal-d1">From health score to revenue opportunity</h2>
       <p class="reveal reveal-d2">My first concept summarized account performance as a gamified 0–100 "health score," modeled on a credit report — recommendations were framed as opportunities to gain points. Testing with marketers killed it: the score reduced visual clutter but increased anxiety.</p>
@@ -201,7 +213,7 @@
     </section>
 
     <!-- ══════════════════════ KEY DESIGN DECISIONS ══════════════════════ -->
-    <section class="cs2-section">
+    <section class="cs2-section" id="decisions">
       <span class="cs2-eyebrow reveal">Key Design Decisions</span>
       <h2 class="reveal reveal-d1">Three decisions made the product trustworthy</h2>
       <p class="reveal reveal-d2">Building trust is rooted in transparency and comprehension. Following feedback from users, I redesigned key components of the experience — focusing on making user data and recommended strategies not just accessible but comprehensible, in a manner that users can verify for themselves.</p>
@@ -297,7 +309,7 @@
     </section>
 
     <!-- ══════════════════════ FINAL EXPERIENCE ══════════════════════ -->
-    <section class="cs2-section">
+    <section class="cs2-section" id="final">
       <span class="cs2-eyebrow reveal">The Final Experience</span>
       <h2 class="reveal reveal-d1">Three moments that matter</h2>
 
@@ -343,7 +355,7 @@
     </section>
 
     <!-- ══════════════════════ IMPACT ══════════════════════ -->
-    <section class="cs2-section">
+    <section class="cs2-section" id="impact">
       <span class="cs2-eyebrow reveal">Impact</span>
       <h2 class="reveal reveal-d1">Results that shaped the roadmap</h2>
 

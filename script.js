@@ -118,3 +118,86 @@
   document.addEventListener("mousedown", () => ring.classList.add("cursor-ring--click"));
   document.addEventListener("mouseup",   () => ring.classList.remove("cursor-ring--click"));
 })();
+
+// Case study table of contents: highlight the section currently in view.
+(function () {
+  const toc = document.querySelector(".cs-toc");
+  if (!toc) return;
+
+  const links = [...toc.querySelectorAll(".cs-toc-link")];
+  const sections = links
+    .map((l) => document.querySelector(l.getAttribute("href")))
+    .filter(Boolean);
+
+  function setActive(id) {
+    links.forEach((l) =>
+      l.classList.toggle("active", l.getAttribute("href") === "#" + id)
+    );
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      // Pick the entry nearest the top of the viewport that is visible.
+      const visible = entries.filter((e) => e.isIntersecting);
+      if (visible.length) {
+        const top = visible.sort(
+          (a, b) => a.boundingClientRect.top - b.boundingClientRect.top
+        )[0];
+        setActive(top.target.id);
+      }
+    },
+    { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
+  );
+
+  sections.forEach((s) => observer.observe(s));
+
+  // The rail is always on screen; only the active-section highlight moves.
+  toc.classList.add("visible");
+})();
+
+// First-load preloader: "Fidel [avatar] Boamah" intro, then reveal the page.
+// Plays once per session — returning to the home page from the nav skips it.
+(function () {
+  const preloader = document.getElementById("preloader");
+  if (!preloader) return;
+
+  const body = document.body;
+  const SEEN_KEY = "introPlayed";
+
+  // sessionStorage can throw in private mode; treat a failure as "not seen".
+  let seen = false;
+  try { seen = sessionStorage.getItem(SEEN_KEY) === "1"; } catch (e) {}
+
+  if (seen) {
+    body.classList.remove("preloading");
+    preloader.remove();
+    return;
+  }
+  try { sessionStorage.setItem(SEEN_KEY, "1"); } catch (e) {}
+
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Hold the intro long enough for the words + avatar to settle, then hand off.
+  const HOLD = reduced ? 200 : 2500;
+
+  // Briefly wink before the page reveals.
+  const avatar = preloader.querySelector(".pre-avatar");
+  if (avatar && !reduced) {
+    setTimeout(() => { avatar.src = "assets/profilepic_wink.png"; }, HOLD - 550);
+  }
+
+  function reveal() {
+    body.classList.remove("preloading"); // fade the page content in
+    preloader.classList.add("is-done");   // fade the overlay out
+    preloader.addEventListener(
+      "transitionend",
+      () => preloader.remove(),
+      { once: true }
+    );
+    // Fallback removal in case the transition event doesn't fire.
+    setTimeout(() => preloader && preloader.remove(), 900);
+  }
+
+  window.addEventListener("load", () => setTimeout(reveal, HOLD));
+  // Safety net if the load event already fired or is delayed by media.
+  setTimeout(reveal, HOLD + 2500);
+})();
