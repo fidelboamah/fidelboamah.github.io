@@ -4072,6 +4072,14 @@ a.fig-card:hover .fig-card-title { color: var(--link-blue); }
   display: block;
   border-radius: 8px;
 }
+/* Crops a card's artwork to the AI Insights video's 1304x720 frame, so
+   the two animated cards share a shape. Display-only: the file is untouched. */
+.fig-card-tint img.fig-card-crop {
+  aspect-ratio: 1304 / 720;
+  object-fit: cover;
+  object-position: top; /* keep the top of each frame, trim only the bottom */
+}
+
 /* TruckBux: smaller centered artwork with breathing room */
 .fig-card-tint--truck img {
   width: auto;
